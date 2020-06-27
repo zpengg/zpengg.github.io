@@ -2,11 +2,14 @@
 
 ---
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/b97c9a03759e887d70fbffa0cff706ac.png)
+
 priority queue 相对来说是比较独立的
 优先队列 也可以称为优先堆
 
 ## Queue 接口
+
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/9365891d3e3289d4c0f70894d286a4d7.png)
+
 其中,一些方法的作用是类似的
 - add 插入失败时抛出异常
 - offer 插入失败时返回false

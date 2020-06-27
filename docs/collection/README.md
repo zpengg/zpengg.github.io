@@ -2,7 +2,6 @@
 Show me the code！
 近期开始计划进行源码的阅读了
 
-
 ## 数据结构
 java常用的数据结构主要存在于java.util，主要继承于两个顶级接口Collection、Map
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/23199c9d9b475d577daf4f4e8211fd22.png)
@@ -64,19 +63,19 @@ dictionary 及其子类 hashtable
 先从最常见的入手, 几个基础接口都看一下
 
 list相关的
- - ArrayList
+ - [ArrayList](/collection/ArrayList.md)
 
 map相关的
- - HashMap
- - TreeMap
+ - [HashMap](/collection/HashMap.md)
+ - [TreeMap](/collection/TreeMap.md)
 
 set 简单看看
 
 以下用得少点 各个击破
 
 这些也是刷题时常遇到的，先看看
- - 堆 priority queue
- - 双端队列,链表等概念 dequeue, LinkedList ArrayDequeue
+ - [堆 PriorityQueue](/collection/PriorityQueue.md)
+ - [双端队列,链表等概念 dequeue, LinkedList ArrayDequeue](/collection/LinkedList.md)
  - LRU 与 LinkHashMap 关系
 
 这些和语言特性有关系
@@ -84,5 +83,5 @@ set 简单看看
  - EnumMap EnumSet
 
 历史原因 先了解下特性再去看
- - vector stack
+ - [Vector Stack](Vector.md)
  - HashTable

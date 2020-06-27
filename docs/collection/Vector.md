@@ -2,6 +2,7 @@
 
 ---
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/654739fc937480b0158534b05ac2dcf6.png)
+
 Vector 它是JDK1.0版本添加的类。(元老级..)
 与ArrayList相似, 继承于AbstractList，实现了List, RandomAccess, Cloneable这些接口。
 下面主要对比着来分析

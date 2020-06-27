@@ -3,6 +3,7 @@
 ---
 ## AbstractMap
 定义了 k-v pair, SimpleEntry和SimpleImmutableEntry
+
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/34e0113823f3c50d030f7e175981106c.png)
 
 用以下容器存储K V 数据
@@ -206,13 +207,15 @@ untreeify的话,本身是链表了,主要还是节点的转换
  - 每个叶节点（NIL节点 无数据） 是黑色
  - root到NIL的黑色节点数目相同
 
-前文提到的TreeNode节点继承LinkedHashMap.Entry<K,V>
+前文提到的TreeNode节点继承`LinkedHashMap.Entry<K,V>`
+
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/c1486e4b84d176b08f13429b383dd33e.png)
 
 在两个类绕来绕去，和HashMap在1.8进行了树化改进有关系。历史原因。
 
 treeify
-```
+
+```java
 final void treeify(Node<K,V>[] tab) {
     TreeNode<K,V> root = null;
     for (TreeNode<K,V> x = this, next; x != null; x = next) {
@@ -256,8 +259,10 @@ final void treeify(Node<K,V>[] tab) {
     moveRootToFront(tab, root);
 }
 ```
+
 balanceInsertion 平衡插入后的节点
-```
+
+```java
 static <K,V> TreeNode<K,V> balanceInsertion(TreeNode<K,V> root,
                                                     TreeNode<K,V> x) {
     x.red = true;
@@ -317,10 +322,11 @@ static <K,V> TreeNode<K,V> balanceInsertion(TreeNode<K,V> root,
     }
 }
 ```
+
 这篇的图解很详细
 https://www.cnblogs.com/oldbai/p/9890808.html
 
-```
+```java
 /**
  * 左旋
  */
@@ -358,7 +364,8 @@ s  子节点left or right
 自己把父子**双向**的引用变化过程画出来会比较清楚
 
 忽略判空的话大概是这样一个过程
-```
+
+```java
 // rl 交给 pr
 p.r = rl
 rl.p = p
@@ -375,7 +382,7 @@ p.p = r
 
 ## putTreeVal
 
-```
+```java
 final TreeNode<K,V> putTreeVal(HashMap<K,V> map, Node<K,V>[] tab,
                                int h, K k, V v) {
     Class<?> kc = null;
@@ -431,7 +438,8 @@ final TreeNode<K,V> putTreeVal(HashMap<K,V> map, Node<K,V>[] tab,
 不过插入比树化多一种情况是需要判断相同key的节点。有则只需修改value
 
 find 函数则是一个递归查找过程, 也是类似的
-```
+
+```java
 final TreeNode<K,V> find(int h, Object k, Class<?> kc) {
     TreeNode<K,V> p = this;
     do {

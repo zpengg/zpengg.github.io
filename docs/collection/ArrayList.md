@@ -11,7 +11,9 @@ RamdomAccess 随机访问
 
 ## List
 重点关注List接口
+
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/70282f18a00dc95df682759717b31906.png)
+
 List 接口则主要是比Collection 接口多了一些 与index 相关 的接口
 
 ## AbstractList
@@ -20,6 +22,7 @@ List 接口则主要是比Collection 接口多了一些 与index 相关 的接�
 - SubList
 - RandomAccessSubList
 三个抽象类，暂时先略过后面两个
+
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/ef87acb8388cfdc3b3ad3e372c6eb891.png)
 
 AbstractList 有 Itr 内部类，不作细述。
@@ -91,7 +94,9 @@ public ArrayList(Collection<? extends E> c) {
 ```
 
 具体的数据访问方式主要是实现了AbstractList。
+
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/0545378e5b916afb9bcfc95ee467a967.png)
+
 这里不对具体的操作数据的方法细说。细节的可以自己翻源码查看一下。
 
 主要关注扩容，数据检查的一些方法。
@@ -199,7 +204,7 @@ for (int i = 0; i < size; i++)
 ```
 
 修改数据需要通过复制数组实现，同时还会修改`modCount`
-```
+```JAVA
 public static native void arraycopy(Object src,  int  srcPos,
         Object dest, int destPos,
         int length);

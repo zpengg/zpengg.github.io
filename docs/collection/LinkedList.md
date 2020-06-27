@@ -5,11 +5,14 @@
 两个deque 放一起说了。
 <!--more-->
 ## 继承关系
+
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/7f8e65651d9eee9c06cf5c6a4923564e.png)
+
 queue已经介绍过了
 现看下deque提供的接口
 
 ### Deque
+
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/4f1bcff8fe223388933253f5e29ec295.png)
 
 deque 主要多了头尾的概念，两头都可以操作，同时提供了stack会用到的push pop接口。
@@ -201,6 +204,7 @@ E unlink(Node<E> x) {
 
 ```
 ### 环状
+
 ```JAVA
     public void addFirst(E e) {
         if (e == null)
@@ -218,6 +222,7 @@ E unlink(Node<E> x) {
             doubleCapacity();
     }
 ```
+
 `head = (head - 1) & (elements.length - 1)` 这一句可以看到 `head` 更新是一哥 `&`操作，而元素长度刚好是2的幂，所以相当于是取模操作。
 这时 head 和 tail 指针 相当于是数组头尾连接的 **环** 上移动。
 head == tail 的情况就相当于整个环已经满了。
@@ -225,6 +230,7 @@ head == tail 的情况就相当于整个环已经满了。
 
 ### 扩容
 扩容相对于ArrayList来说简单一点，满了直接DoubleCapacity。
+
 ```JAVA
 public void addFirst(E e) {
     if (e == null)

@@ -5,7 +5,7 @@
     * [红黑树与 TreeMap](/collection/TreeMap.md)
     * [堆与 PriorityQueue](/collection/PriorityQueue.md)
     * [双端队列： LinkedList & ArrayDeque](/collection/LinkedList.md)
-* [JVM](/juc)
+* [JUC](/juc)
 * [JVM](/jvm)
 * [多线程](/thread)
 * [计算机网络](/network)

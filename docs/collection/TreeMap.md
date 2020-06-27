@@ -7,12 +7,16 @@
 TreeMap 对比 HashMap 
 多继承了NavigableMap，NavigableMap则继承了 SortedMap
 ## SortedMap
+
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/feee604ddff88b5b20ad3af44ee9a507.png)
+
 subMap, headMap, tailMap 等接口以SortedMap返回部分满足范围的K，V对， key在 fromKey，toKey 范围内
 也可通过firstKey,lastKey 取得头尾key
 
 ## NavigableMap
+
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/a727aea5229e4f223269790f8679e061.png)
+
 比起SortedMap多了可以访问相邻key和Entry的方法
 还有celling floor 等向上向下找到最近key的方法
 
@@ -98,7 +102,7 @@ put方法
 
 二叉查找树 左右子数查找key是否存在，在的话修改值
 直至查找不到，则在该处插入 然后红黑树调整`fixAfterInsertion`
-```
+```java
 public V put(K key, V value) {
     Entry<K,V> t = root;
     if (t == null) {
@@ -391,7 +395,7 @@ leetcode上提到以下方法去删除需要最小的转换
 >3. If the target node has two children, replace the node with its in-order successor or predecessor node and delete that node.
 以上方法都不会改变中序遍历的顺序
 
-```
+```JAVA
 /*
  * Returns the successor of the specified Entry, or null if no such.
  */
