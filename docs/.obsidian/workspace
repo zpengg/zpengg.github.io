@@ -8,8 +8,11 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "dailyLog/template.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -89,7 +92,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "dailyLog/template.md"
+              }
             }
           }
         ]
@@ -105,6 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "dailyLog/template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,23 +127,22 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 475
   },
   "lastOpenFiles": [
-    "weeklyLog/template.md",
+    "dailyLog/template.md",
+    "dailyLog/2020-11-23.md",
+    "set -euxo pipefial.md",
     "weeklyLog/2020-W48.md",
+    "weeklyLog/template.md",
     "weeklyLog/template 1.md",
     "2020-W48.md",
     "inbox/Untitled.md",
     "inbox/Untitled 1.md",
-    "inbox/t.md",
-    "inbox/自动同步到Git.md",
-    "weeklyLog/Untitled.md",
-    "inbox/Untitled 2.md"
+    "inbox/t.md"
   ]
 }
