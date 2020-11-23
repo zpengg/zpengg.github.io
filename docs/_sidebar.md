@@ -1,11 +1,10 @@
-* [集合](/collection/)
-* [JUC](/juc)
-* [JVM](/jvm)
-* [多线程](/thread)
-* [计算机网络](/network)
+* [集合](colection/README)
+* [JUC](/juc/README)
+* [JVM](/jvm/README)
+* [多线程](/thread/README)
+* [计算机网络](/network/README)
 * [os](/os)
 * [Redis](/Redis/)
-
   * [数据结构](/Redis/RedisObject.md)
     * [redis string构底层数据结](/Redis/redisString.md)
     * [redis list底层数据结构](/Redis/RedisList.md)
@@ -34,6 +33,3 @@
 	* [JS](/JS/) 
 	* [React](/React/) 
 * 算法
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5Mjk3NTIsMTE1MDMzMTk2MF19
--->

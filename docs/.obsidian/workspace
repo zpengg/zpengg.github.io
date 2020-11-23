@@ -1,0 +1,149 @@
+{
+  "main": {
+    "id": "b8d1a5f2c9450d1e",
+    "type": "split",
+    "children": [
+      {
+        "id": "2754d81e1b16b179",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "2020-W48.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c67d0dbe724fc365",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3023734f589d92b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aabca3dec71b5b10",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "c79899015f167d6c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cda10e1b20cb19de",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "82d7590b6f278244",
+    "type": "split",
+    "children": [
+      {
+        "id": "06ad32e7d611d6f9",
+        "type": "tabs",
+        "dimension": 40.276406712734456,
+        "children": [
+          {
+            "id": "d18d93e3ae575695",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "93af89bd1c5429f1",
+        "type": "tabs",
+        "dimension": 19.743336623889437,
+        "children": [
+          {
+            "id": "4c2f05933ec985e4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2020-W48.md"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "ef9fe5cb0d7b075f",
+        "type": "tabs",
+        "dimension": 39.98025666337611,
+        "children": [
+          {
+            "id": "b322c0dc72554316",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2020-W48.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "7e6f3c382b441d8c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "lastOpenFiles": [
+    "2020-W48.md",
+    "inbox/Untitled 1.md",
+    "dailyLog/2020-11-23.md",
+    "inbox/Untitled.md",
+    "inbox/自动同步到Git.md",
+    "_sidebar.md",
+    "collection/TreeMap.md",
+    "Untitled.md",
+    "Untitled 1.md",
+    "set -euxo pipefial.md"
+  ]
+}

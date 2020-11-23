@@ -6,7 +6,7 @@
 priority queue 相对来说是比较独立的
 优先队列 也可以称为优先堆
 
-## Queue 接口
+## [[Queue]] 接口
 
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/9365891d3e3289d4c0f70894d286a4d7.png)
 

@@ -1,5 +1,5 @@
 * Java基础
-    * [面向对象](/)
+    * [对象](/object)
     * [集合](/collection/)
     * [JUC](/juc/)
     * [JVM](/jvm/)
