@@ -1,1 +1,1 @@
-{"shouldStartWeekOnMonday":false,"shouldConfirmBeforeCreate":true,"wordsPerDot":250,"showWeeklyNote":false,"weeklyNoteFormat":"","weeklyNoteTemplate":"","weeklyNoteFolder":""}
+{"shouldStartWeekOnMonday":false,"shouldConfirmBeforeCreate":true,"wordsPerDot":250,"showWeeklyNote":true,"weeklyNoteFormat":"","weeklyNoteTemplate":"weeklyLog/template","weeklyNoteFolder":"weeklyLog"}

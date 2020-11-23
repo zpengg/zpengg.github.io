@@ -4,15 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "2754d81e1b16b179",
+        "id": "0e7d0d78b8ed95b2",
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "2020-W48.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -92,9 +89,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2020-W48.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -110,7 +105,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2020-W48.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,15 +129,15 @@
     "width": 300
   },
   "lastOpenFiles": [
+    "weeklyLog/template.md",
+    "weeklyLog/2020-W48.md",
+    "weeklyLog/template 1.md",
     "2020-W48.md",
-    "inbox/Untitled 1.md",
-    "dailyLog/2020-11-23.md",
     "inbox/Untitled.md",
+    "inbox/Untitled 1.md",
+    "inbox/t.md",
     "inbox/自动同步到Git.md",
-    "_sidebar.md",
-    "collection/TreeMap.md",
-    "Untitled.md",
-    "Untitled 1.md",
-    "set -euxo pipefial.md"
+    "weeklyLog/Untitled.md",
+    "inbox/Untitled 2.md"
   ]
 }
