@@ -8,11 +8,8 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "inbox/动态规划.md",
-            "mode": "source"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -93,9 +90,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "inbox/动态规划.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -111,7 +106,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "inbox/动态规划.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
