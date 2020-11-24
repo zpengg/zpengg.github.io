@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "d8d4f617c3547972",
+        "id": "2b0a682c338fb9c0",
         "type": "leaf",
         "active": true,
         "state": {
@@ -138,13 +138,13 @@
   "lastOpenFiles": [
     "inbox/动态规划.md",
     "inbox/递归.md",
+    "inbox/dp.md",
     "weeklyLog/2020-W48.md",
     "dailyLog/2020-11-23.md",
     "inbox/202011241606.md",
     "inbox/202011241604.md",
     "inbox/202011241607.md",
     "_sidebar.md",
-    "inbox/Untitled.md",
-    "2020-W48.md"
+    "inbox/Untitled.md"
   ]
 }
