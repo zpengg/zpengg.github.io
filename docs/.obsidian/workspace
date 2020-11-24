@@ -8,9 +8,10 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "attachment/Pasted image 20201124101107.png"
+            "file": "inbox/快应用.md",
+            "mode": "source"
           }
         }
       }
@@ -92,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "attachment/Pasted image 20201124101107.png"
+                "file": "inbox/快应用.md"
               }
             }
           }
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "attachment/Pasted image 20201124101107.png",
+                "file": "inbox/快应用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,15 +135,15 @@
     "width": 475
   },
   "lastOpenFiles": [
+    "inbox/快应用.md",
+    "attachment/Pasted image 20201124101145.png",
+    "inbox/快应用框架.md",
     "attachment/Pasted image 20201124101107.png",
     "inbox/Untitled 1.md",
     "inbox/Untitled.md",
     "template/daily.md",
     "dailyLog/2020-11-24.md",
     "inbox/自动同步到Git.md",
-    "template/weekly.md",
-    "dailyLog/2020-11-23.md",
-    "dailyLog/template.md",
-    "set -euxo pipefial.md"
+    "template/weekly.md"
   ]
 }
