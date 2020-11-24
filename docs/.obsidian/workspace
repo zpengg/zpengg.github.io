@@ -8,8 +8,11 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "inbox/动态规划.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -58,8 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "82d7590b6f278244",
@@ -90,7 +92,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "inbox/动态规划.md"
+              }
             }
           }
         ]
@@ -106,6 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "inbox/动态规划.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,14 +137,14 @@
   },
   "lastOpenFiles": [
     "inbox/动态规划.md",
+    "inbox/递归.md",
+    "weeklyLog/2020-W48.md",
+    "dailyLog/2020-11-23.md",
     "inbox/202011241606.md",
     "inbox/202011241604.md",
     "inbox/202011241607.md",
     "_sidebar.md",
     "inbox/Untitled.md",
-    "2020-W48.md",
-    "2020-11-20.md",
-    "attachment/Pasted image 20201124101145.png",
-    "attachment/Pasted image 20201124102030.png"
+    "2020-W48.md"
   ]
 }
