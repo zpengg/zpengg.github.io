@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "template/daily.md",
+            "file": "dailyLog/2020-11-23.md",
             "mode": "source"
           }
         }
@@ -93,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "template/daily.md"
+                "file": "dailyLog/2020-11-23.md"
               }
             }
           }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "template/daily.md",
+                "file": "dailyLog/2020-11-23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,9 +134,9 @@
     "width": 475
   },
   "lastOpenFiles": [
-    "inbox/Untitled.md",
     "dailyLog/2020-11-23.md",
     "dailyLog/2020-11-24.md",
+    "inbox/Untitled.md",
     "inbox/自动同步到Git.md",
     "dailyLog/template.md",
     "set -euxo pipefial.md",
