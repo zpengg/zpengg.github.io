@@ -8,8 +8,11 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "inbox/动态规划.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -58,7 +61,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "82d7590b6f278244",
@@ -89,7 +93,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "inbox/动态规划.md"
+              }
             }
           }
         ]
@@ -105,6 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "inbox/动态规划.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,6 +137,7 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "inbox/Untitled.md",
     "2020-W48.md",
     "2020-11-20.md",
     "attachment/Pasted image 20201124101145.png",
@@ -138,7 +146,6 @@
     "inbox/快应用框架.md",
     "attachment/Pasted image 20201124101107.png",
     "inbox/Untitled 1.md",
-    "inbox/Untitled.md",
     "template/daily.md"
   ]
 }
