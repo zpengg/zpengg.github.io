@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "60172ac804f3e1a1",
+        "id": "9471575ab3cdf79f",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "dailyLog/2020-11-23.md",
+            "file": "template/daily.md",
             "mode": "source"
           }
         }
@@ -93,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "dailyLog/2020-11-23.md"
+                "file": "template/daily.md"
               }
             }
           }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "dailyLog/2020-11-23.md",
+                "file": "template/daily.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,22 +127,23 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 475
   },
   "lastOpenFiles": [
-    "dailyLog/2020-11-23.md",
+    "template/daily.md",
     "dailyLog/2020-11-24.md",
-    "inbox/Untitled.md",
     "inbox/自动同步到Git.md",
+    "template/weekly.md",
+    "dailyLog/2020-11-23.md",
+    "inbox/Untitled.md",
     "dailyLog/template.md",
     "set -euxo pipefial.md",
     "weeklyLog/2020-W48.md",
-    "weeklyLog/template.md",
-    "weeklyLog/template 1.md",
-    "2020-W48.md"
+    "weeklyLog/template.md"
   ]
 }
