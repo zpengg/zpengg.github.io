@@ -14,4 +14,6 @@ oss4blog
 
 ## 软件
 brew
-npm
+nodejs nodejs.org
+npm install --unsafe-perm=true --allow-root
+npm换成淘宝镜像
