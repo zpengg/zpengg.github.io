@@ -6,7 +6,7 @@
 * [os](/os)
 * [Redis](/Redis/)
   * [数据结构](/Redis/RedisObject.md)
-    * [redis string构底层数据结](/Redis/redisString.md)
+    * [redis string构底层数据结](/Redis/RedisString.md)
     * [redis list底层数据结构](/Redis/RedisList.md)
     * [redis hash底层数据结构](/Redis/RedisHash.md)
     * [redis set底层数据结构](/Redis/RedisSet.md)

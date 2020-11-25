@@ -1,6 +1,6 @@
 
 * [数据结构](/Redis/RedisObject.md)
-    * [redis string底层数据结构](/Redis/redisString.md)
+    * [redis string底层数据结构](/Redis/RedisString.md)
     * [redis list底层数据结构](/Redis/RedisList.md)
     * [redis hash底层数据结构](/Redis/RedisHash.md)
     * [redis set底层数据结构](/Redis/RedisSet.md)
