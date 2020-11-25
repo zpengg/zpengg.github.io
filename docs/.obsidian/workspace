@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "inbox/动态规划.md",
+            "file": "inbox/dotfile.md",
             "mode": "source"
           }
         }
@@ -93,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "inbox/动态规划.md"
+                "file": "inbox/dotfile.md"
               }
             }
           }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "inbox/动态规划.md",
+                "file": "inbox/dotfile.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,6 +136,7 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "inbox/t.md",
     "inbox/动态规划.md",
     "inbox/递归.md",
     "inbox/dp.md",
@@ -144,7 +145,6 @@
     "inbox/202011241606.md",
     "inbox/202011241604.md",
     "inbox/202011241607.md",
-    "_sidebar.md",
-    "inbox/Untitled.md"
+    "_sidebar.md"
   ]
 }
