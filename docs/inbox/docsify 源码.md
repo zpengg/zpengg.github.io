@@ -1,9 +1,9 @@
 ## 入口
-src/core/index.js
+`src/core/index.js`
 ``` javascript
 documentReady(_ => new Docsify());
 ```
-src/core/Docsify.js
+`src/core/Docsify.js`
 主要是向Docsify[[对象原型|prototype]]注入方法和属性
 ``` javascript
 
@@ -25,7 +25,9 @@ eventMixin(proto);
 initGlobalAPI();
 ```
 
-###
+### `initMixin(proto)`
+``` javascript
+
 export function initMixin(proto) {
   proto._init = function() {
     const vm = this;

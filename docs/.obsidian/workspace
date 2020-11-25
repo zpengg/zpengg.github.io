@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "inbox/docsify 源码.md",
+            "file": "inbox/对象原型.md",
             "mode": "source"
           }
         }
@@ -93,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "inbox/docsify 源码.md"
+                "file": "inbox/对象原型.md"
               }
             }
           }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "inbox/docsify 源码.md",
+                "file": "inbox/对象原型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,15 +136,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "inbox/对象原型.md",
+    "inbox/docsify 源码.md",
+    "inbox/dotfile.md",
     "inbox/Untitled.md",
     "inbox/t.md",
     "inbox/动态规划.md",
     "inbox/递归.md",
     "inbox/dp.md",
     "weeklyLog/2020-W48.md",
-    "dailyLog/2020-11-23.md",
-    "inbox/202011241606.md",
-    "inbox/202011241604.md",
-    "inbox/202011241607.md"
+    "dailyLog/2020-11-23.md"
   ]
 }
