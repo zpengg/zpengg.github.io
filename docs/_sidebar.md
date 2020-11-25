@@ -1,4 +1,4 @@
-* [集合](colection/README)
+* [集合](/collection/collection)
 * [JUC](/juc/README)
 * [JVM](/jvm/README)
 * [多线程](/thread/README)
