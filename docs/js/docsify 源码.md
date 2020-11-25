@@ -26,7 +26,8 @@ initGlobalAPI();
 ```
 
 ### `initMixin(proto)`
-wang
+ 先定义Docsify的原型`proto._init`中的初始化函数。
+ 
 ``` javascript
 
 export function initMixin(proto) {
@@ -45,3 +46,5 @@ export function initMixin(proto) {
   };
 }
 ```
+
+### 
