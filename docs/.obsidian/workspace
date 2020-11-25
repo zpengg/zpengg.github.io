@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "js/JS对象.md",
+            "file": "js/docsify 源码.md",
             "mode": "source"
           }
         }
@@ -93,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "js/JS对象.md"
+                "file": "js/docsify 源码.md"
               }
             }
           }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "js/JS对象.md",
+                "file": "js/docsify 源码.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,8 +136,8 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "inbox/对象原型.md",
     "inbox/docsify 源码.md",
+    "inbox/对象原型.md",
     "inbox/dotfile.md",
     "inbox/Untitled.md",
     "inbox/t.md",

@@ -20,8 +20,8 @@ Function函数 具有与他关联的可执行代码的对象
 Date
 RegExp
 Error
-#### 原型
->每一个对象都有与之相关的原型，类和可扩展性
+####  原型
+>每一个对象都有与之相关的原型（除了null），类和可扩展性
 
 先看一段代码
 
@@ -32,8 +32,8 @@ Error
         /* 我就是构造函数 */
     }
  
-    var b = new a();
- 
+    var b = new a(); // 通过 new 创建
+ 	var e = {}; //通过对象直接量创建
 </script>
  
 </body>
@@ -50,3 +50,5 @@ Error
 通过`new a()` 的到的对象`b`
 `b.__proto__` 同样的 也是指向 `a.prototype` 这个对象
 
+通过对象直接量创建的 就有点不同，他们有同一个原型对象 `Object.prototype`
+![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/16062914635bf651.png)
