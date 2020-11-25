@@ -3,13 +3,13 @@
 ### 原始类型 
 均为不可变。
 三种常用的类型
-number
-string
-bool
+Number
+String
+Boolean
 
 特殊类型
-null 空类型的唯一成员
-undefined 未定义类型的唯一成员
+null Null空类型的唯一成员
+undefined  无法classof。
 
 ### 对象类型
 #### 分类
@@ -21,7 +21,7 @@ Date
 RegExp
 Error
 #### 原型
-每一个对象都有与之相关的
+>每一个对象都有与之相关的原型，类和可扩展性
 
 先看一段代码
 
