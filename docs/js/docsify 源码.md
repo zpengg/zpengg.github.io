@@ -26,6 +26,7 @@ initGlobalAPI();
 ```
 
 ### `initMixin(proto)`
+wang
 ``` javascript
 
 export function initMixin(proto) {
