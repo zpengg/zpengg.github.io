@@ -1,2 +1,2 @@
-hehe
+hehe  
 [[test2|wikiortest]]
