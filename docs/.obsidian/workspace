@@ -8,8 +8,11 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "he he.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -89,7 +92,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "he he.md"
+              }
             }
           }
         ]
@@ -105,6 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "he he.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,9 +137,9 @@
   },
   "lastOpenFiles": [
     "he he.md",
+    "test2.md",
     "test.md",
     "wikiortest.md",
-    "test2.md",
     "test2-wikiortest.md",
     "测试｜obsidian_test.md",
     "_navbar.md",
