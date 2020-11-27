@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "js/docsify 源码.md",
+            "file": "测试｜obsidian_test.md",
             "mode": "source"
           }
         }
@@ -93,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "js/docsify 源码.md"
+                "file": "测试｜obsidian_test.md"
               }
             }
           }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "js/docsify 源码.md",
+                "file": "测试｜obsidian_test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,15 +136,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "inbox/docsify 源码.md",
-    "inbox/对象原型.md",
-    "inbox/dotfile.md",
-    "inbox/Untitled.md",
-    "inbox/t.md",
-    "inbox/动态规划.md",
-    "inbox/递归.md",
-    "inbox/dp.md",
-    "weeklyLog/2020-W48.md",
-    "dailyLog/2020-11-23.md"
+    "测试｜obsidian_test.md",
+    "_navbar.md",
+    "_sidebar.md",
+    "ha ha.md",
+    "Java基础.md",
+    "测试｜obsidian-test.md",
+    "测试｜obsidian test.md",
+    "js/JS对象.md",
+    "原型.md",
+    "inbox/docsify 源码.md"
   ]
 }

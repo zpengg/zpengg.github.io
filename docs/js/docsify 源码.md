@@ -4,7 +4,7 @@
 documentReady(_ => new Docsify());
 ```
 `src/core/Docsify.js`
-主要是向Docsify[[js/JS对象|prototype]]注入方法和属性
+documentReady 时 回调，向Docsify[[原型]]注入方法和属性
 ``` javascript
 
 export function Docsify() {
