@@ -23,6 +23,20 @@
         <div id="app"></div>
         <script>
             window.$docsify = {
+                count: {
+                    countable: true,
+                    position: "top",
+                    margin: "10px",
+                    float: "right",
+                    fontsize: "0.9em",
+                    color: "rgb(90,90,90)",
+                    language: "chinese",
+                    localization: {
+                        words: "",
+                        minute: "",
+                    },
+                    isExpected: true,
+                },
                 toc: {
                     scope: ".markdown-section",
                     headings: "h1, h2, h3, h4, h5, h6",
@@ -44,7 +58,7 @@
                     crossChapter: true,
                     crossChapterText: true,
                 },
-                search: 'auto',
+                search: "auto",
                 // darkMode: {
                 //   light: {
                 //     toggleBtnBg: "#42b983",
@@ -67,21 +81,14 @@
                             }
                             var editHtml =
                                 "" +
-                                "欢迎各位师傅前来交流思路😀" +
-                                "如有文章中存在错误🐣请务必指正：[📝编辑文章](" +
+                                "欢迎各位前来交流" +
+                                "如有存在错误，请务必指正：[📝编辑文章](" +
                                 url +
                                 ")" +
                                 "\n\n----\n";
                             return editHtml + html;
                         });
 
-                        // load livere
-                        hook.beforeEach(function (content) {
-                            var comment =
-                                "<div id='lv-container' data-id='city' data-uid='MTAyMC80OTM3Ny8yNTg2OQ=='></div>\n\n----\n";
-                            // '<h1>评论</h1> 没有显示评论区？点击<a href="javascript:location.reload();">刷新</a>试试:D '
-                            return content + comment;
-                        });
 
                         hook.doneEach(function () {
                             (function (d, s) {
@@ -101,6 +108,8 @@
                         // add copyright
                         hook.beforeEach(function (content) {
                             var copyRight =
+                                "\n\n" +
+                                "---\n" +
                                 "文章作者: [zpengg 📧](mailto:zpengg@yeah.net) \n\n" +
                                 "文章链接: " +
                                 url +
@@ -108,7 +117,16 @@
                                 "版权声明: 本博客所有文章除特别声明外，均采用" +
                                 "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)许可协议。\n\n" +
                                 "转载请注明来自[zpengg.github.io/Coder](http://zpengg.github.io/Coder)！\n";
+                                "</div>"
                             return content + copyRight;
+                        });
+
+                        // load livere
+                        hook.beforeEach(function (content) {
+                            var comment =
+                                "<div id='lv-container' data-id='city' data-uid='MTAyMC80OTM3Ny8yNTg2OQ=='></div>\n\n----\n";
+                            // '<h1>评论</h1> 没有显示评论区？点击<a href="javascript:location.reload();">刷新</a>试试:D '
+                            return content + comment;
                         });
 
                         // parse twemoji
@@ -119,37 +137,28 @@
                 ],
             };
         </script>
+        <!-- plugins -->
+        <script src="//unpkg.com/docsify-count/dist/countable.min.js"></script>
+        <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+        <script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
+        <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"> 
+        <script> mermaid.initialize({ startOnLoad: true });</script>
+        <script src="//cdn.jsdelivr.net/npm/docsify-pangu/lib/pangu.min.js"></script>
         <!-- highlight -->
+        <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-nasm.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markdown.min.js"></script>
-
         <script src="//cdn.jsdelivr.net/gh/TaQini/docsify-twemoji@master/twemoji.min.js"></script>
-  <script type="text/javascript">
-    var _paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-    _paq.push(["setCookieDomain", "*.taqini.space"]);
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="//ma.taqini.space/";
-      _paq.push(['setTrackerUrl', u+'matomo.php']);
-      _paq.push(['setSiteId', '1']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-    })();
-  </script>
- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
- <!-- plugins -->
- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
- <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
- <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
- <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify-wikilink@1"></script>
+        <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+        <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
     </body>
 </html>
