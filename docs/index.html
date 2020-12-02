@@ -23,7 +23,11 @@
         <div id="app"></div>
         <script>
             window.$docsify = {
-                count: {
+                notFoundPage: {
+                    '/': '_404.md',
+                    '/de': 'de/_404.md',
+                },
+                  count: {
                     countable: true,
                     position: "top",
                     margin: "10px",
@@ -143,8 +147,10 @@
         <script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
         <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"> 
         <script> mermaid.initialize({ startOnLoad: true });</script>
+        <script src="https://unpkg.com/docsify-toc@1/dist/toc.js"></script>
         <script src="//cdn.jsdelivr.net/npm/docsify-pangu/lib/pangu.min.js"></script>
         <!-- highlight -->
+        <script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
