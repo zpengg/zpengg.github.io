@@ -19,7 +19,13 @@
     <a :href = "'#/weeklyLog/'+getYearWeek(getDay(0))">本周</a>
     <br/>
     <a :href = "'#/weeklyLog/'+getYearWeek(getDay(-7))">上周</a>
+
+<h2>统计</h2>
+<div>
+    <figure><embed src="https://wakatime.com/share/@4c63d2f9-59cd-4435-8077-f0932505d115/002cd766-d8ab-44e8-a345-60546b4c5662.svg"></embed></figure>
 </div>
+</div>
+
 
 <script>
   new Vue({

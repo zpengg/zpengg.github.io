@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "he he.md",
+            "file": "dailyLog/2020-12-03.md",
             "mode": "source"
           }
         }
@@ -93,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "he he.md"
+                "file": "dailyLog/2020-12-03.md"
               }
             }
           }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "he he.md",
+                "file": "dailyLog/2020-12-03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,6 +136,7 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "dailyLog/2020-12-03.md",
     "he he.md",
     "test2.md",
     "test.md",
@@ -144,7 +145,6 @@
     "测试｜obsidian_test.md",
     "_navbar.md",
     "_sidebar.md",
-    "ha ha.md",
-    "Java基础.md"
+    "ha ha.md"
   ]
 }
