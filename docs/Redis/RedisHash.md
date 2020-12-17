@@ -2,12 +2,14 @@
 数据量少的时候是 ziplist（老） zipmap（新）
 量多的时候是 dict
 
+dict 长这样:
 <div align="center"> <img src="http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/ccaa3098a178e98a8e4ed1b559fbfc3e.png"/> </div>
 
+特点：
+1. 两个 ht
+2. 使用哈希 hset, 会更加节省内存（相对于 set)
+3. 一个哈希并不适合存储大量的字段 field, 字段需要遍历 O(n)
 
-特点： 两个 ht
-
-使用哈希会更加节省内存，一个哈希并不适合存储大量的字段field
 ## rehash
 
 ## 渐进式 rehash
@@ -21,7 +23,7 @@
 我自己的记法是，已使用桶占比。跟 java 类似
 
 ### zipmap
-zipmap主要是为了节省内存空间而设计的字符串-字符串映射结构
+zipmap 主要是为了节省内存空间而设计的字符串-字符串映射结构
 
 #### 参数
 配置域字段最大个数限制
@@ -31,7 +33,6 @@ hash-max-zipmap-entries 512
 hash-max-zipmap-value 64
 
 #### 结构
-zipmap (不用了)
+zipmap （不用了）
 
 <div align="center"> <img src="http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/d72ad7fa106d306baf1e7e48d43fe56d.png"/> </div>
-

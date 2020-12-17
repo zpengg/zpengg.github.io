@@ -4,15 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "2b0a682c338fb9c0",
+        "id": "e4ebc696e5ab0afc",
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "dailyLog/2020-12-03.md",
-            "mode": "source"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -92,9 +89,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "dailyLog/2020-12-03.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -110,7 +105,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "dailyLog/2020-12-03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,6 +130,8 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "weeklyLog/2020-W48.md",
+    "algo/README.md",
     "dailyLog/2020-12-03.md",
     "he he.md",
     "test2.md",
@@ -143,8 +139,6 @@
     "wikiortest.md",
     "test2-wikiortest.md",
     "测试｜obsidian_test.md",
-    "_navbar.md",
-    "_sidebar.md",
-    "ha ha.md"
+    "_navbar.md"
   ]
 }
