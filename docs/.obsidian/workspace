@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "e4ebc696e5ab0afc",
+        "id": "09e372bea185deef",
         "type": "leaf",
         "active": true,
         "state": {
@@ -37,7 +37,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#leetcode",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -54,7 +54,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -130,15 +131,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Untitled.md",
+    "algo/目标和.md",
+    "inbox/testwikilink.md",
+    "dailyLog/2020-11-24.md",
+    "_navbar.md",
+    "_sidebar.md",
     "weeklyLog/2020-W48.md",
     "algo/README.md",
     "dailyLog/2020-12-03.md",
-    "he he.md",
-    "test2.md",
-    "test.md",
-    "wikiortest.md",
-    "test2-wikiortest.md",
-    "测试｜obsidian_test.md",
-    "_navbar.md"
+    "he he.md"
   ]
 }
