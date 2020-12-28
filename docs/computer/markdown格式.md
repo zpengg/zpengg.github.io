@@ -11,5 +11,5 @@ GFM(GitHub Flavored Markdown)
     ```代码块
     无空格换行
     _不表示斜体_
-    -todolist []
+    - todolist []
 ```
