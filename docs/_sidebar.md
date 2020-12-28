@@ -1,3 +1,4 @@
+* [算法](/algo)
 * JAVA 后端
   * [对象](/object)
   * [集合](/collection)
