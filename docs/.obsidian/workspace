@@ -6,10 +6,21 @@
       {
         "id": "09e372bea185deef",
         "type": "leaf",
-        "active": true,
         "state": {
           "type": "graph",
           "state": {}
+        }
+      },
+      {
+        "id": "10b4c8e5b750382c",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "algo/二叉树展开为链表.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -90,7 +101,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "algo/二叉树展开为链表.md"
+              }
             }
           }
         ]
@@ -106,6 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "algo/二叉树展开为链表.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,15 +145,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "algo/二叉树展开为链表.md",
+    "link.md",
+    "algo/README.md",
+    "algo/二叉搜索树.md",
     "Untitled.md",
     "algo/目标和.md",
     "inbox/testwikilink.md",
     "dailyLog/2020-11-24.md",
     "_navbar.md",
-    "_sidebar.md",
-    "weeklyLog/2020-W48.md",
-    "algo/README.md",
-    "dailyLog/2020-12-03.md",
-    "he he.md"
+    "_sidebar.md"
   ]
 }
