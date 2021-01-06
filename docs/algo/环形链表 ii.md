@@ -18,5 +18,36 @@
 ## 思路
 
 ## code
+```java
+public class Solution {
+    public ListNode detectCycle(ListNode head) {
+        ListNode fast,slow;
+        fast = slow = head;
+        while(fast!= null && fast.next!= null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast == slow) break;
+        }
+        // 关键 1x速度， 重走一遍
+        slow = head;
+        while(slow != fast){
+            fast = fast.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+}
+
+```
 
 ## 坑点
+### 有环逻辑 快慢指针
+```java
+
+ while(fast!= null && fast.next!= null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast == slow) break;
+        }
+```
+### slow = head 重新走至相遇点
