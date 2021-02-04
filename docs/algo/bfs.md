@@ -55,3 +55,52 @@ int BFS(Node start, Node target) {
 }
 
 ```
+## 双向BFS
+知道终点的前提下
+```java
+int minStep(String head, String target){
+    // 用集合不用队列，可以快速判断元素是否存在
+    Set<String> q1 = new HashSet<>();
+    Set<String> q2 = new HashSet<>();
+    Set<String> visited = new HashSet<>();
+
+    int step = 0;
+    q1.add(head);
+    q2.add(target);
+
+    while (!q1.isEmpty() && !q2.isEmpty()) {
+        // 哈希集合在遍历的过程中不能修改，用 temp 存储扩散结果
+        Set<String> temp = new HashSet<>();
+
+        /* 将 q1 中的所有节点向周围扩散 */
+        for (String cur : q1) {
+            /* 判断是否到达终点（ 两边出发的路径相交点） */
+            if (q2.contains(cur))
+                return step;
+            visited.add(cur);
+
+            /* 将一个节点的未遍历相邻节点加入集合 */
+            for (op : oplist){
+                // add to queue
+            }
+              
+        }
+        /* 在这里增加步数 */
+        step++;
+        // temp 相当于 q1
+        // 这里交换 q1 q2，下一轮 while 就是扩散 q2
+        q1 = q2;
+        q2 = temp;
+    }
+    return -1; 
+}
+
+
+```
+// 用集合不用队列，可以快速判断元素是否存在
+    Set<String> q1 = new HashSet<>();
+    Set<String> q2 = new HashSet<>();
+
+## 题目
+[[二叉树的最小高度]]
+[[打开转盘锁]]

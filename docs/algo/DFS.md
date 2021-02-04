@@ -38,3 +38,13 @@ BACDEFGHI
 ABCDEFGHI
 
 ### 中序遍历不唯一
+
+## 问题类型
+### 排列 permutation
+[[全排列]]
+[[戳气球]]
+### 组合 combination
+[[组合]]
+[[括号生成]]
+### 子集 subset
+[[子集]]
