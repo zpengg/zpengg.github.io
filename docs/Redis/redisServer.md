@@ -1,6 +1,6 @@
 # redisServer 
-
-## redisServer
+redis 服务内存结构
+## 内存结构
 redis 所有数据库都保存着 redisServer.db 数组中
 ```
 +-------------+
@@ -11,8 +11,8 @@ redis 所有数据库都保存着 redisServer.db 数组中
 |    dbnum    |      |
 |     16      |      |
 +-------------+      |  +---------+                         +------------+
-                     +->| redisDb |                     +-> | ListObject |
-                        +---------+    +------------+   |   +------------+
+|   ...       |      +->| redisDb |                     +-> | ListObject |
++-------------+         +---------+    +------------+   |   +------------+
                         |  dict   | -> |  StringObj | --+
                         +---------+    +------------+       +------------+
                         | expires |    |  StringObj | ----> | HashObject |
@@ -29,4 +29,35 @@ redis 所有数据库都保存着 redisServer.db 数组中
                                       +------------+    +-------------+
 
 ```
-[[rdisDb]]
+
+## redisDb 数组
+dbNum: 数据库个数  默认值 16
+db： [[rdisDb]] 数据库数组
+
+`SELECT n` 命令可以切换 redisClient.db 指向，默认 0 号 db
+
+## 持久化状态
+[[RDB]]
+[[AOF]]
+
+## 命令执行过程
+[[客户端]]
+[[命令执行过程]]
+
+## 定期函数 serverCron 
+[[serverCron]]
+
+## 服务器启动过程
+初始化状态： 
+      配置路径、端口、64bit、运行频率 hz、持久化条件、LRU 始终、命令表
+加载配置：
+      initServerConfig
+初始化数据结构：
+      clients
+      db[]
+      pubsub_channels
+      lua
+      slowlog
+还原状态：
+      rdb| aof（优先）
+执行事件循环 loop, 开始接收命令
