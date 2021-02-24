@@ -1,4 +1,4 @@
-* [算法](/algo)
+* [算法](/algo/)
 
 * JAVA 后端
   * [对象](/object/)
@@ -33,10 +33,11 @@
     * rollup
     * webpack
 
-* [开源项目学习](/opensouce)
+* [开源项目学习](/opensouce/)
+
 * 代码之外
-  * [日志](/dailyLog)
-  * [周记](/weeklyLog)
-  * [GTD](/gtd)
-  * [🎸guitar](/guitar)
-  * [🥁drum](/drum)
+  * [日志](/dailyLog/)
+  * [周记](/weeklyLog/)
+  * [GTD](/gtd/)
+  * [🎸guitar](/guitar/)
+  * [🥁drum](/drum/)

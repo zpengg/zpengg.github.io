@@ -9,6 +9,8 @@
     * [缓存: Redis](/redis/)
     * [数据库](/database/)
     * [常用框架](/framework/)
+* 框架 & 中间件
+    * [Kafka](/kafka/)
 * 前端
     * [js](/js/)
     * [React](/react/)
