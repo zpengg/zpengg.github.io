@@ -18,7 +18,7 @@
     * [zookeeper](/zookeeper)
     * [dubbo](/dubbo)
     * [MQ]
-    * [Kafka]
+    * [Kafka](/kafka)
   * [大数据]
     * [ElasticSearch](/es)
     * [Flink](/flink)

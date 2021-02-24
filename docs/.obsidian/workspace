@@ -4,23 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "09e372bea185deef",
-        "type": "leaf",
-        "state": {
-          "type": "graph",
-          "state": {}
-        }
-      },
-      {
-        "id": "10b4c8e5b750382c",
+        "id": "2ed4c533b3e30661",
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "algo/二叉树展开为链表.md",
-            "mode": "source"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -65,8 +54,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -85,7 +73,7 @@
             "id": "d18d93e3ae575695",
             "type": "leaf",
             "state": {
-              "type": "calendar",
+              "type": "empty",
               "state": {}
             }
           }
@@ -101,9 +89,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "algo/二叉树展开为链表.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -119,7 +105,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algo/二叉树展开为链表.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +118,10 @@
             "type": "leaf",
             "state": {
               "type": "tag",
-              "state": {}
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
             }
           }
         ],
@@ -145,15 +133,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "algo/动态规划.md",
     "algo/二叉树展开为链表.md",
+    "kafka/readme.md",
     "link.md",
     "algo/README.md",
     "algo/二叉搜索树.md",
     "Untitled.md",
     "algo/目标和.md",
     "inbox/testwikilink.md",
-    "dailyLog/2020-11-24.md",
-    "_navbar.md",
-    "_sidebar.md"
+    "dailyLog/2020-11-24.md"
   ]
 }
