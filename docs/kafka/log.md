@@ -1,7 +1,6 @@
-# log 文件
+# 日志文件
 dir: <topic>-<partition>
 每个文件夹里有多个logsegment, 一个logsegment里面有多个文件（后缀不同） 
-
 
 ## 日志读取过程
 日志文件 描述的是一组物理文件
@@ -13,12 +12,11 @@ log --跳表--> logsegment --> .index
 .index with pos --二分查找<pos, offset> --> .log whth offset
 ```
 
-
 ## Logsegment
 指一组文件，根据第一条消息 baseOffset 来命名, 固定 20 位数字
 在内存中使用**跳表**存储 
 ```
-.log 日志文件
+.log 日志数据文件
 .index offset index
 .timeindex timestamp index
 ```
