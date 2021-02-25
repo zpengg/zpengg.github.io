@@ -1,5 +1,5 @@
 # KafkaRequestHandlerPool
-[[broker]]
+[[Broker]]
 默认 num.io.threads 8
 将 RequestChannel ， kafkaAPI 传给 RequstHandler
 ## 流程
