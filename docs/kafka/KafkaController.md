@@ -1,10 +1,16 @@
 # KafkaController
 [[Broker]] 上的 [[控制器]]
 
+## 新版优化
+把多线程的方案改成了单线程加事件队列的方案
+1. 增加了一个 Event Executor Thread，事件执行线程
+2. ZooKeeper 全部改为异步操作
+3. 优先队列 如 stopReplica
+
 ## module
 - controllerContext
 
-- [[TopicsStateMachine]] [[主题]] 
+- [[TopicsStateMachine]]
   - topicChangeListener
   - deleteTopicsListener
 - [[ReplicaStateMachine]] 
