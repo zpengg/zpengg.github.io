@@ -1,7 +1,7 @@
 * [算法](/algo/)
 
 * JAVA 后端
-  * [对象](/object/)
+  * [基础](/java/)
   * [集合](/collection/)
   * [JUC](/juc/)
   * [JVM](/jvm/)
