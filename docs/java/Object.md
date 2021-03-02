@@ -6,7 +6,7 @@ public native int hashCode()
 
 public boolean equals(Object obj)
 
-protected native Object clone() throws CloneNotSupportedException
+protected native Object clone() throws CloneNotSupportedException // 本地方法
 
 public String toString()
 
@@ -45,5 +45,16 @@ equals() 看具体实现
 
 
 ### !! 重写equals方法后重写hashCode方法
-若 == -> equals()，hashcode ==
+> [!INFO]
+> 规定：　如果两个对象相等，必须有相同的hashcode 值
+
+若 equals()，hashcode 必须要 ==
+
 否则，为了适配一些容器set map， 避免equals 但 hashCode 不同，
+
+## 不可变对象
+参考 String
+final class
+final fields
+final entity
+

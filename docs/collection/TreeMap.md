@@ -6,18 +6,17 @@
 
 TreeMap 对比 HashMap 
 多继承了NavigableMap，NavigableMap则继承了 SortedMap
-## SortedMap
+## SortedMap 有序，范围内访问
 
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/feee604ddff88b5b20ad3af44ee9a507.png)
 
 subMap, headMap, tailMap 等接口以SortedMap返回部分满足范围的K，V对， key在 fromKey，toKey 范围内
 也可通过firstKey,lastKey 取得头尾key
 
-## NavigableMap
-
+## NavigableMap 可访问相邻元素
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/a727aea5229e4f223269790f8679e061.png)
 
-比起SortedMap多了可以访问相邻key和Entry的方法
+比起 SortedMap 多了可以访问相邻key和Entry的方法
 还有celling floor 等向上向下找到最近key的方法
 
 ## 构造函数
