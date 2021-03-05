@@ -29,6 +29,9 @@ sendfile 内核空间buff 通过DMA传输到网卡nic buffer，用户空间[[零
 #### 消息打包压缩，减通信量
 batch send
 批量 数据压缩
+## 实战问题
+[[消费因果顺序]] 增删改
+[[消息堆积]]
 
 ## 参考资料
  - [Kafka 的这些原理你知道吗](https://segmentfault.com/a/1190000021370626?utm_source=tag-newest)

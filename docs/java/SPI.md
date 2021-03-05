@@ -3,8 +3,7 @@ SPI（Service Provider Interface），是JDK内置的一种**服务提供发现�
 Java中SPI机制主要思想是将装配的控制权移到程序之外, 核心思想就是**解耦**。
 ## 实现
 通过在ClassPath路径下的META-INF/services文件夹查找文件，自动加载文件里所定义的类。
-利用了[[反射]]机制
-
+利用了[[反射]]机制 ClassLoader.loadClass(), 进行[[类加载]]
 ## src
 ### ServiceLoader
 ```java

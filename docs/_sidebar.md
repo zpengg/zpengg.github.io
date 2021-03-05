@@ -3,8 +3,8 @@
 * JAVA 后端
   * [基础](/java/)
   * [集合](/collection/)
-  * [JUC](/juc/)
-  * [JVM](/jvm/)
+  * [JUC](/java/juc)
+  * [JVM](/java/jvm)
   * [计算机网络](/network/)
   * [Redis](/Redis/)
   * [数据库](/database/)

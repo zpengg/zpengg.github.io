@@ -72,6 +72,8 @@ static final int hash(Object key) {
 然后再看回前边为高16位异或。相当于融合了高低位的信息，减少低位一样时这种掩码导致的冲突。
 
 ## put
+链表尾部插入，顺带判断是否需要树化
+
 ```java
 public V put(K key, V value) {
     return putVal(hash(key), key, value, false, true);
