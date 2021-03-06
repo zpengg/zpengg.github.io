@@ -1,4 +1,4 @@
 *.log
-.metals
+*/.metals/*
 .obsidian
 obsidian.css
