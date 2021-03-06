@@ -183,4 +183,8 @@ sds sdsnewlen(const void *init, size_t initlen) {
 
     s = (char*)sh+hdrlen;
 
+## 逆序存位数组
+
+bitcount 使用了查表&swar算法
+
 

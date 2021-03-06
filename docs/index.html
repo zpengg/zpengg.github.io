@@ -84,9 +84,7 @@
                                     vm.route.file;
                             }
                             var editHtml =
-                                "" +
-                                "欢迎各位前来交流" +
-                                "如有存在错误，请务必指正：[📝编辑文章](" +
+                                "[📝编辑文章](" +
                                 url +
                                 ")" +
                                 "\n\n----\n";
@@ -110,20 +108,20 @@
                         });
 
                         // add copyright
-                        hook.beforeEach(function (content) {
-                            var copyRight =
-                                "\n\n" +
-                                "---\n" +
-                                "文章作者: [zpengg 📧](mailto:zpengg@yeah.net) \n\n" +
-                                "文章链接: " +
-                                url +
-                                "\n\n" +
-                                "版权声明: 本博客所有文章除特别声明外，均采用" +
-                                "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)许可协议。\n\n" +
-                                "转载请注明来自[zpengg.github.io](http://zpengg.github.io)！\n";
-                                "</div>"
-                            return content + copyRight;
-                        });
+                        // hook.beforeEach(function (content) {
+                        //     var copyRight =
+                        //         "\n\n" +
+                        //         "---\n" +
+                        //         "文章作者: [zpengg 📧](mailto:zpengg@yeah.net) \n\n" +
+                        //         "文章链接: " +
+                        //         url +
+                        //         "\n\n" +
+                        //         "版权声明: 本博客所有文章除特别声明外，均采用" +
+                        //         "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)许可协议。\n\n" +
+                        //         "转载请注明来自[zpengg.github.io](http://zpengg.github.io)！\n";
+                        //         "</div>"
+                        //     return content + copyRight;
+                        // });
 
                         // load livere
                         hook.beforeEach(function (content) {
