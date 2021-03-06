@@ -18,24 +18,34 @@ entrySet 则交给子类实现
 public abstract Set<Entry<K,V>> entrySet();
 ```
 
-## HashMap
-### 默认值
+## HashMap 
+## 关键概念
+### capacity： bin 数量
+### loadFactor： 构造参数, deafault：0.75
+### threshold = capacity * loadFactor
+threshold = capacity * loadFactor 扩容阈值 or 初始化成initCapacity最近的2的幂
+但threashold 是 用来描述 size的。entry数的门限值
+不是bin的门限！！！
+### size: entry数量
 ```
+entry    variable      bin       const
+size vs threshold = capacity * loadFactor
+```
+## 默认值
+```java
     static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka 16
 
     static final int MAXIMUM_CAPACITY = 1 << 30;
 
     static final float DEFAULT_LOAD_FACTOR = 0.75f;
+    //冲突是泊松分布, lf=0.75, 同一个位置冲突8次概率,小于 1/10,000,000
+    static final int TREEIFY_THRESHOLD = 8; //  一个桶节点数的树化阈值
 
-    static final int TREEIFY_THRESHOLD = 8; // 链表节点数树化阈值
+    static final int UNTREEIFY_THRESHOLD = 6; // 一个桶节点数小于该值，取消树化
 
-    static final int UNTREEIFY_THRESHOLD = 6; // 取消树化阈值
-
-    static final int MIN_TREEIFY_CAPACITY = 64;
-
+    static final int MIN_TREEIFY_CAPACITY = 64; //桶数量 足够多 时才进行树化
 ```
-### 结构
-数组 -> 链表 -> 红黑树的结构
+## 结构:  数组 -> 链表 or 红黑树
 此处应有图
 
 存放数据的链表节点由内部类Node来表示
@@ -48,7 +58,7 @@ static class Node<K,V> implements Map.Entry<K,V>{
     ...
 }
 ```
-#### hash值 计算
+#### hash值 计算：高低位异或
 hash 值是 key.hashCode 异或xor 自身高16位
 ```JAVA
 static final int hash(Object key) {
@@ -61,7 +71,10 @@ static final int hash(Object key) {
 (n-1)后bit全为1，hash值做mask掩码（像子网那样）
 然后再看回前边为高16位异或。相当于融合了高低位的信息，减少低位一样时这种掩码导致的冲突。
 
-```
+## put
+链表尾部插入，顺带判断是否需要树化
+
+```java
 public V put(K key, V value) {
     return putVal(hash(key), key, value, false, true);
 }
@@ -115,10 +128,11 @@ public V put(K key, V value) {
         return null;
 }
 ```
+## 节点转换
 数量少的时候是链表
-多的时候会进行树化,
-数化的时候Node会转换成另一个类TreeNode
-```
+多的时候会进行树化, 而且 Node会转换成另一个类TreeNode
+### TreeNode节点继承`LinkedHashMap.Entry<K,V>`
+```java
 static final class TreeNode<K,V> extends LinkedHashMap.Entry<K,V> {
     TreeNode<K,V> parent;  // red-black tree links
     TreeNode<K,V> left;
@@ -128,25 +142,20 @@ static final class TreeNode<K,V> extends LinkedHashMap.Entry<K,V> {
     ...
 }
 ```
-红黑树细节的话后面详谈
+![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/c1486e4b84d176b08f13429b383dd33e.png)
+在两个类绕来绕去，和HashMap在1.8进行了树化改进有关系。历史原因。
 
-## resize 扩容
-先看看容量有关的几个关键概念
-loadFactor 负载因子 必须
-threshold = capacity * loadFactor 扩容阈值 or 初始化成initCapacity最近的2的幂
-
-size 键值对数量
-capacity 桶数组大小 默认16，非默认根据threshold lazy init
-
+## resize 桶扩容
 前边提到数组是这样一个形式
 ```
 transient Node<K,V>[] table;
 ```
 table的一个slot中存放的是hash 相同的元素（hash冲突）
-### 处理单个节点
+
+### 处理单个节点:  直接按新容量重新定位
 ` newTab[e.hash & (newCap - 1)] = e; ` 直接按新容量重新定位
 
-### 处理链表
+### 处理链表 rehash: 按e.hash & oldCap 旧bin Capacity掩码分两组重新计算hash
 前文坐标计算 `(n-1) & hash`
 扩容前oldCap为16
 0000 1111 mask = 15
@@ -162,10 +171,12 @@ table的一个slot中存放的是hash 相同的元素（hash冲突）
 Node<K,V> loHead = null, loTail = null;
 Node<K,V> hiHead = null, hiTail = null;
 ```
-### 处理树
-split方法，按上面方法分成两个链表再看判断 treeify/untreeify
+### 处理树  split -> treeify/untreeify
+split方法，按上面方法分成两个链表, 实质已 untreeify
+再重新判断是否需要树化或转换回Node节点
+treeify/ untreeify（转换节点）
 untreeify的话,本身是链表了,主要还是节点的转换
-```
+```java
  final Node<K,V> untreeify(HashMap<K,V> map) {
             Node<K,V> hd = null, tl = null;
             for (Node<K,V> q = this; q != null; q = q.next) {
@@ -180,11 +191,10 @@ untreeify的话,本身是链表了,主要还是节点的转换
         }
 ```
 
-
 ### 2的幂
 这里可以看到size取2的幂是有原因的
 另外初始门限也有个比较有趣的函数，作用是获得最近的2的幂
-```
+```java
     static final int tableSizeFor(int cap) {
         int n = cap - 1;
         n |= n >>> 1;
@@ -199,21 +209,12 @@ untreeify的话,本身是链表了,主要还是节点的转换
 -1后，最高位置为1，然后移位后按位或则是将次高位后全都置的1
 再加1则会进位成2的幂。
 
-## treeify
-先了解下红黑树的基本性质
- - 节点分红/黑色 boolean red
- - 根节点 黑色
- - 红子节点的子节点黑色。
- - 每个叶节点（NIL节点 无数据） 是黑色
- - root到NIL的黑色节点数目相同
-
-前文提到的TreeNode节点继承`LinkedHashMap.Entry<K,V>`
-
-![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/c1486e4b84d176b08f13429b383dd33e.png)
-
-在两个类绕来绕去，和HashMap在1.8进行了树化改进有关系。历史原因。
-
-treeify
+[[红黑树]]性质
+## treeify 树化
+链表 -> 树
+先按平衡二叉树位置逐个插入链表节点, 
+同时保留双向链表 next/prev 关系(利用了 entry 的next 方便将来遍历，但对外不暴露）
+有需要可以用[[linkedHashMap]]
 
 ```java
 final void treeify(Node<K,V>[] tab) {
@@ -239,9 +240,9 @@ final void treeify(Node<K,V>[] tab) {
                 else if (ph < h)
                     dir = 1;
                 else if ((kc == null &&  // key 为null
-                          (kc = comparableClassFor(k)) == null) ||
-                         (dir = compareComparables(kc, k, pk)) == 0) //class 类型不为null，但比较了还是相等
-                    dir = tieBreakOrder(k, pk); //
+                          (kc = comparableClassFor(k)) == null) || // 反射看 class 类型是否实现了 comparable接口
+                         (dir = compareComparables(kc, k, pk)) == 0) //但比较了还是相等
+                    dir = tieBreakOrder(k, pk); //identityhashcode
                 // 得出dir 插入位置
                 TreeNode<K,V> xp = p;
                 if ((p = (dir <= 0) ? p.left : p.right) == null) {
@@ -276,7 +277,7 @@ static <K,V> TreeNode<K,V> balanceInsertion(TreeNode<K,V> root,
             return root; // 循环出口
         if (xp == (xppl = xpp.left)) {
             if ((xppr = xpp.right) != null && xppr.red) {
-                // xxpr 存在 and 为红色
+                // xxpr 存在 & 为红色
                 xppr.red = false;
                 xp.red = false;
                 xpp.red = true;

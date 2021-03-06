@@ -63,25 +63,26 @@ dictionary 及其子类 hashtable
 先从最常见的入手, 几个基础接口都看一下
 
 list相关的
- - [ArrayList](/collection/ArrayList.md)
+ - [[ArrayList]]
 
 map相关的
- - [HashMap](/collection/HashMap.md)
- - [TreeMap](/collection/TreeMap.md)
-
-set 简单看看
+ - [[HashMap]] HashSet
+ - [[TreeMap]] TreeSet
+set 底层实现是Map
+Collection 工具也可包装成set
 
 以下用得少点 各个击破
 
 这些也是刷题时常遇到的，先看看
- - [堆 PriorityQueue](/collection/PriorityQueue.md)
- - [双端队列,链表等概念 dequeue, LinkedList ArrayDequeue](/collection/LinkedList.md)
- - LRU 与 LinkHashMap 关系
+ - [[PriorityQueue]] 堆
+ - [[LinkedList]][[ArrayDequeue]] 双端队列,链表等概念 dequeue, 
+ - [[LinkedHashMap]] LRU 与 LinkHashMap 关系, 利用了hashMap的钩子 
 
 这些和语言特性有关系
- - WeakHashMap
+ - WeakHashMap 弱引用 cache
  - EnumMap EnumSet
 
 历史原因 先了解下特性再去看
- - [Vector Stack](Vector.md)
- - HashTable
+synchronize 方法, 性能低，但事实还是有并发问题，如： add if not exist
+ - [[Vector]] Stack
+ - [[HashTable]]
