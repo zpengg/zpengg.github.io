@@ -133,15 +133,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "FullGC.md",
+    "java/对象分配.md",
+    "java/堆.md",
+    "java/happens-before.md",
+    "java/jvm.md",
+    "java/java 内存模型.md",
+    "java/jmm.md",
     "algo/动态规划.md",
     "algo/二叉树展开为链表.md",
-    "kafka/readme.md",
-    "link.md",
-    "algo/README.md",
-    "algo/二叉搜索树.md",
-    "Untitled.md",
-    "algo/目标和.md",
-    "inbox/testwikilink.md",
-    "dailyLog/2020-11-24.md"
+    "kafka/readme.md"
   ]
 }

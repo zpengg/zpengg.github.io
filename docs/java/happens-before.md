@@ -1,4 +1,4 @@
-# happens-before
+# happens-before 约束重排
 插入内存屏障。 禁止会改变程序结果的[[指令重排]]规则
 
 ## 6个规则
