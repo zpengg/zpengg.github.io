@@ -12,3 +12,4 @@
  - Class 对象没有被任何地方引用
 
 -Xnoclassgc 可限制不被卸载
+-XX:+CmsClassUnloadingEnabled cms 默认不卸载，可开启
