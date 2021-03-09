@@ -16,7 +16,6 @@ fdisk -l
 - [[tail]]
 - find
 
-
 ## 网络
 ifconfig
 iptables 防火墙

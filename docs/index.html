@@ -108,8 +108,9 @@
                         });
 
                         // add copyright
-                        // hook.beforeEach(function (content) {
-                        //     var copyRight =
+                        hook.beforeEach(function (content) {
+                             var copyRight =
+                                 "\n\n" 
                         //         "\n\n" +
                         //         "---\n" +
                         //         "文章作者: [zpengg 📧](mailto:zpengg@yeah.net) \n\n" +
@@ -120,8 +121,8 @@
                         //         "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)许可协议。\n\n" +
                         //         "转载请注明来自[zpengg.github.io](http://zpengg.github.io)！\n";
                         //         "</div>"
-                        //     return content + copyRight;
-                        // });
+                            return content + copyRight;
+                        });
 
                         // load livere
                         hook.beforeEach(function (content) {
