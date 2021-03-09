@@ -2,9 +2,10 @@
 
 * JAVA基础
   * [基础](/java/)
-  * [集合](/java/collection/)
-  * [JUC](/java/juc/)
-  * [JVM](/java/jvm/)
+  * [集合](/java/collection)
+  * [JUC](/java/juc)
+  * [JVM](/java/jvm)
+  * [多线程](/java/thread)
   * 常用框架
     * [容器 Spring](/Spring/)
     * [ORM MyBatis](/mybatis/)
@@ -14,11 +15,10 @@
 * 后端 
   * [计算机网络](/network/)
   * [操作系统os](/os/)
-    * [[linux]]
-    * [多线程](/thread/)
+    * [linux](/linux/)
   * [数据库](/database/)
     * [Redis](/Redis/)
-    * [[mySql]]
+    * [mySql](/mySql/)
   * [服务器](/server/)
   * [分布式](/distribute/)
     * [zookeeper](/zookeeper/)
