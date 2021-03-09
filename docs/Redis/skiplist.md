@@ -21,7 +21,7 @@ typedef struct zskiplist {
 
 如图所示
 ```
-backward  双向指针  forward (多个，by levels)
+backward  双向指针  forward per level
         <- node ->
                 ->
                 ... 指向不同 level 的节点
@@ -106,7 +106,7 @@ int zslRandomLevel(void) {
     return (level<ZSKIPLIST_MAXLEVEL) ? level : ZSKIPLIST_MAXLEVEL;
 }
 ```
-#### 0.25 的空间开销
+#### p = 0.25 小阈值节约空间开销
 节点层数至少为1。而大于1的节点层数，满足一个概率分布。
 节点层数恰好等于1的概率为1-p。
 节点层数大于等于2的概率为p，而节点层数恰好等于2的概率为p(1-p)。

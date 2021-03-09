@@ -1,8 +1,8 @@
-# zset/sortedSet 有序集合 
+# ZSET/sortedSet 有序集合 
 ## sorted set 实现
 
 当数据较少时，sorted set是由一个[[ziplist]]来实现的。
-当数据多的时候，才转换成[[zset]] + [[dict]]
+当数据多的时候，才转换成[[skiplist]] + [[dict]]
 
 ## zset 定义
 ```C

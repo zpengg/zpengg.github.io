@@ -1,4 +1,4 @@
-# Hash
+# HASH 哈希
 ## 实现
 [[zipmap]] 2.6 以前
 [[ziplist]]

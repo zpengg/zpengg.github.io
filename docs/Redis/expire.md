@@ -7,6 +7,7 @@ typedef struct redisDb{
 ```
 
 ## 命令
+[[expireAt]][[ttl]] 
 ### 设置过期时间 EXPIRE
 ```
 // key 不存在或设置失败，返回 0

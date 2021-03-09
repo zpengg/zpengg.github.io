@@ -1,8 +1,4 @@
-# HyperLogLog 基数统计
-
-标签（空格分隔）： 数据结构 redis
-
----
+# hyperloglogs 基数统计
 
 统计不重复的元素可以称为基数统计
 
@@ -33,17 +29,18 @@ https://www.jianshu.com/p/55defda6dcd2
 
 ## redis 实现
 redis中统计数组大小设置为，hash函数生成64位bit数组。
-14bit 直接计算桶下标。50bit用来看连续0的位置
+### 14bit 直接计算桶下标。
+2^14 = 16834 个 HyperLogLog 键（桶下标）
+### 50bit用来看连续0的位置
+然后每次观察50bit的最大连续0数量，并更新相应的桶的6bit值 计数
 
-2^14 = 16834 个HyperLogLog 键（桶下标）
-每个桶给6bit记录最大的连续0位置，
+#### 每个桶给6bit 记录  最大连续0位置
 16384* 6 /8/1024/1024 = 12kB
 只需要花费 12 KB 内存。（固定的大小去描述基数指标,不随基数改变）
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/1cadb29d72019597e05eed1053de31e3.png)
 
-然后每次观察50bit的最大连续0数量，并更新相应的桶的6bit值
+### 计算桶调和平均
 ![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/a9f7461e1dc9a52667ba0c1582c65f4c.png)
-
 
 [底层还有一些优化]( https://mp.weixin.qq.com/s/dyXGKfpzd4MP9JrSYTZC6Q?utm_medium=hao.caibaojian.com&utm_source=hao.caibaojian.com) 
 字节流中如何找到6bit位置

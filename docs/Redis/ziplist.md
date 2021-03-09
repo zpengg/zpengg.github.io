@@ -7,6 +7,7 @@ Object encoding ziplist
 <总Byte> <tail偏移byte> <entry 个数> <......entry...> <0xFF>
 <zlbytes> <zltail> <zllen> <entry> <entry> ... <entry> <zlend>
 ```
+
 ### 各段含义
 zlbytes：32bit无符号整数，表示ziplist占用的字节总数（包括本身占用的4个字节）；
 zltail：32bit无符号整数，记录最后一个entry的偏移量，方便快速定位到最后一个entry；
@@ -14,6 +15,10 @@ zllen：16bit无符号整数，记录entry的个数；
 entry：存储的若干个元素，可以为字节数组或者整数；
 zlend：ziplist最后一个字节，是一个结束的标记位，值固定为255。
 
+### tail 偏移：方便逆向
+
+### entry最多 255
+ziplist 结构所最多包含的 entry 个数。最大值为 255
 
 ### Entry 结构
 
@@ -29,22 +34,22 @@ previous_entry_length 表示前一个数据项占用的总字节数。这个字�
 
 ##### 作用：逆向遍历
 prev_ptr = curr_ptr - curr_entry.previous_entry_length
-##### 问题：连锁更新 cascade update
+
+##### 性能问题：连锁更新 cascade update
 前节点长度变大时 可能引起 entry 的连锁更新
 低概率 O（n^2）
 
 >压缩列表里恰好有多个连续的、长度介于250字节到253字节之间的结点
 >即使出现连锁更新，只要结点数量不多，就不会造成影响
 
+
 #### encoding 
 encoding 的长度和值根据保存的是 int 还是 byte[]，还有数据的长度而定；
 ##### 字节数组编码 表 7-2
 ##### 整数编码 表 7-3
 
-### 最大容量
-ziplist 结构所最多包含的 entry 个数。最大值为 215215
 
-## 特点
+## 特点: 节约内存，格式简单
 最主要是为了节约内存，list，zset， hash 在数据量少的时候都用到了这种结构。
 存储效率很高，但是它不利于修改操作，插入和删除操作需要频繁的申请释放内存。
 小端（little endian）模式字节流 低位字节开头

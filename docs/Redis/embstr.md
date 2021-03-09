@@ -1,8 +1,7 @@
 # embstr
 ## 特点
 ### 嵌入对象
-本质也是sds
-redisobject 内存连续 减少一次分配次数
+本质也是sds 嵌入 [[redisObject]] 内存连续 减少一次分配次数
 ### 短
 长度少于 39 byte
 ### 只读 修改会转换成sds
