@@ -1,22 +1,45 @@
-* Java后台
-    * [对象](/object/)
-    * [集合](/collection/)
-    * [JUC](/juc/)
-    * [JVM](/jvm/)
-    * [多线程](/thread/)
-    * [计算机网络](/network/)
-    * [os](/os/)
-    * [缓存: Redis](/redis/)
-    * [数据库](/database/)
-    * [常用框架](/framework/)
-* 框架 & 中间件
-    * [Kafka](/kafka/)
-* 前端
-    * [js](/js/)
-    * [React](/react/)
 * [算法](/algo/)
+* JAVA基础
+  * [基础](/java/)
+  * [集合](/java/collection/)
+  * [JUC](/java/juc/)
+  * [JVM](/java/jvm/)
+  * [多线程](/java/thread/)
+  * 常用框架
+    * [容器 Spring](/Spring/)
+    * [ORM MyBatis](/mybatis/)
+    * [表达式引擎](/express/)
+    * [Netty](/netty/)
+* 后端 
+  * [计算机网络](/network/)
+  * [操作系统os](/os/)
+  * [[linux]]
+  * [数据库](/database/)
+    * [Redis](/Redis/)
+    * [[mySql]]
+  * [服务器](/server/)
+  * [分布式](/distribute/)
+    * [zookeeper](/zookeeper/)
+    * [dubbo](/dubbo/)
+    * [nginx](/nginx/)
+    * [MQ](/mq/)
+      * [Kafka](/kafka/)
+  * [大数据]
+    * [ElasticSearch](/es/)
+    * [Flink](/flink/)
+* [前端]
+  * [JS](/js/) 
+  * 前端框架
+    * [React](/react/) 
+    * [Vue](/vue/)
+  * 工程化 
+    * rollup
+    * webpack
+* 其他
+    * [工程实践](/product/)
+    * [开源项目学习](/opensouce/) 
+
 * 代码之外
-  * [debug](/debug/)
   * [日志](/dailyLog/)
   * [周记](/weeklyLog/)
   * [GTD](/gtd/)

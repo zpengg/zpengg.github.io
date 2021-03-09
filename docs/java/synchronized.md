@@ -44,16 +44,9 @@ public synchronized static void fun() {
 对象头 --> markword 32bit -->
 
 
-## 锁化
-markword 中 
-无锁     |hashcode|分代 |0非偏向|01
-偏向锁   |线程Id |epoch| 分代|1|01
-轻量级锁 |指向栈中|00
-重量级锁 |object_monitor|10
-GC      |           |11
-
-## 锁消除
-编译器 发现不会竞争，消除掉synchronize
+## 特性
+[[锁膨胀]]
+[[锁消除]]
 
 ## wait/notify
 配合[[Object]]的wait()、notify()系列方法可以实现等待/通知模式。

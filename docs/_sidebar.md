@@ -2,7 +2,7 @@
 
 * JAVA基础
   * [基础](/java/)
-  * [集合](/collection/)
+  * [集合](/java/collection/)
   * [JUC](/java/juc/)
   * [JVM](/java/jvm/)
   * 常用框架
