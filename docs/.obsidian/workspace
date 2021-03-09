@@ -6,10 +6,35 @@
       {
         "id": "2ed4c533b3e30661",
         "type": "leaf",
-        "active": true,
+        "dimension": 40.66726780883679,
         "state": {
           "type": "graph",
           "state": {}
+        }
+      },
+      {
+        "id": "bf8c72cf551762ef",
+        "type": "leaf",
+        "dimension": 18.034265103697024,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "java/堆.md",
+            "mode": "source"
+          }
+        }
+      },
+      {
+        "id": "67085d5029930485",
+        "type": "leaf",
+        "dimension": 41.298467087466186,
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "java/FullGC.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -89,7 +114,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "java/FullGC.md"
+              }
             }
           }
         ]
@@ -105,6 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "java/FullGC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,15 +161,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "java/FullGC.md",
+    "java/逃逸分析.md",
+    "java/栈帧.md",
+    "java/堆.md",
+    "java/弱引用.md",
     "FullGC.md",
     "java/对象分配.md",
-    "java/堆.md",
     "java/happens-before.md",
     "java/jvm.md",
-    "java/java 内存模型.md",
-    "java/jmm.md",
-    "algo/动态规划.md",
-    "algo/二叉树展开为链表.md",
-    "kafka/readme.md"
+    "java/java 内存模型.md"
   ]
 }
