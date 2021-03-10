@@ -2,7 +2,7 @@
 
 * JAVA基础
   * [基础](/java/)
-  * [集合](/java/collection)
+  * [集合](/java/Collection)
   * [JUC](/java/juc)
   * [JVM](/java/jvm)
   * [多线程](/java/thread)
