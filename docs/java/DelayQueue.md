@@ -1,4 +1,9 @@
 # DelayQueue
+
+[[Collection]]
+## 基本元素
+[[ReentrantLock]] + [[PriorityQueue]]
+[[Condition]]
 ## Delayed 接口
 ```java
 public interface Delayed extends Comparable<Delayed>{
@@ -14,7 +19,6 @@ public long getDelay(TimeUnit unit){
 ```
 ## available条件锁队列
  signal()只是把等待的线程放到AQS的队列里面，并不是真正的唤醒
-## 原理分析
 ## 内部结构
 可重入锁
 用于根据delay时间排序的优先级队列

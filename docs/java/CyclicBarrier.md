@@ -5,7 +5,7 @@
 > 等大家到同一起跑线
 ## 没有显式Countdown
 ## 互斥： 只有一个在运行
-[[reentrantlock]]
+[[ReentrantLock]]
 ## 条件锁
 [[条件锁]]
 

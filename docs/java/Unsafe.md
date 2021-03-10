@@ -11,10 +11,10 @@ public static Unsafe getUnsafe()
 ## varHandle
 
 JDK9 之后，官方推荐使用 java.lang.invoke.Varhandle 来替代 Unsafe 大部分功能，对比 Unsafe ，
-[[Varhandle]]有着相似的功能，但会更加安全，并且，在并发方面也提高了不少性能。
+[[VarHandle]]有着相似的功能，但会更加安全，并且，在并发方面也提高了不少性能。
 ## 作用
 - 修改私有字段
 - 抛出 checked [[异常]]
 - 使用堆外内存
 - [[CAS]] 无锁算法
-- [[park]]、unpark 阻塞，唤醒[[线程]]
+- [[park]]、unpark [[线程阻塞]]，唤醒线程, 

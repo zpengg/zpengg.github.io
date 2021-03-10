@@ -1,4 +1,4 @@
-# javap.md
+# javap
 
 查看里面的class文件
 javap xxxx.class

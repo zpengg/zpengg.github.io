@@ -1,12 +1,4 @@
-# Java集合
-Show me the code！
-近期开始计划进行源码的阅读了
-
-## 数据结构
-java常用的数据结构主要存在于java.util，主要继承于两个顶级接口Collection、Map
-![](http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/23199c9d9b475d577daf4f4e8211fd22.png)
-
-### Collection
+# Collection
 约定构造方法
  - 无参数
  - 以Collection 类型参数 的构造方法 主要用于复制
@@ -58,35 +50,3 @@ vector 及其子类
 dictionary 及其子类 hashtable
 1.7的hashmap 与 1.8的差别
 
-## 阅读顺序
-
-先从最常见的入手, 几个基础接口都看一下
-
-list相关的
- - [[ArrayList]]
-
-map相关的
- - [[HashMap]] HashSet
- - [[TreeMap]] TreeSet
-set 底层实现是Map
-Collection 工具也可包装成set
-
-以下用得少点 各个击破
-
-这些也是刷题时常遇到的，先看看
- - [[PriorityQueue]] 堆
- - [[LinkedList]][[ArrayDequeue]] 双端队列,链表等概念 dequeue, 
- - [[LinkedHashMap]] LRU 与 LinkHashMap 关系, 利用了hashMap的钩子 
-
-这些和语言特性有关系
- - WeakHashMap 弱引用 cache
- - EnumMap EnumSet
-
-历史原因 先了解下特性再去看
-synchronize 方法, 性能低，但事实还是有并发问题，如： add if not exist
- - [[Vector]] Stack
- - [[HashTable]]
-
-
- 并发
- - [[ConcurrentHashMap]]

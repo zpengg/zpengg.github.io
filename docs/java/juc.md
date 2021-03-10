@@ -7,12 +7,17 @@
 
 ## 基于互斥锁
 - [[ReentrantLock]]
+    - [[CopyOnWriteArrayList]]
 
-## 基于共享锁
+### 基于条件锁（有条件阻塞）
+- [[DelayQueue]]
+- [[CyclicBarrier]] 环形栅栏，轮流运行
+
+## 基于共享锁 （唤醒多个）
 - [[ReentrantReadWriteLock]] 读写锁
 - [[CountDownLatch]]  倒计数器
 - [[Semaphore]] 限流
 - [[Phaser]] 多阶段并发
 
-## 基于条件锁
-- [[CyclicBarrier]] 环形栅栏，轮流运行
+## 分段锁
+- [[ConcurrentHashMap]]

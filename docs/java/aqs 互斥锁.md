@@ -8,10 +8,9 @@
     }
 ```
 
-
 ## aquireQueued 获取下一个排队中的线程 互斥
 **互斥锁**
-[[watiStatus]]
+[[waitStatus]]
 排队线程阻塞、唤醒和中断处理 acquireQueued(addWaiter(Node.EXCLUSIVE), arg))
 
 刚才分析了 addWaiter 入队过程 返回的是入队后的节点。
@@ -48,9 +47,9 @@ final boolean acquireQueued(final Node node, int arg) {
 }
 ```
 
-## shouldParkAfterFailedAcquire
+### shouldParkAfterFailedAcquire
 acquireQueued 如果再次失败，
-再调用shouldParkAfterFailedAcquire()将节点的等待状态置为等待唤醒（SIGNAL）；
+再调用shouldParkAfterFailedAcquire()将节点的前置节点等待状态置为**需要信号唤醒（SIGNAL）**；
 
 ```java
 private static boolean shouldParkAfterFailedAcquire(Node pred, Node node) {
@@ -82,9 +81,10 @@ private static boolean shouldParkAfterFailedAcquire(Node pred, Node node) {
 }
 ```
 
-### 为什么检测到0后，要将前驱节点设置成SIGNAL
+### 为什么要将前驱节点设置成SIGNAL（检测到0后）
+0 是AQS末尾节点，提醒前驱节点 执行完毕 要继续唤醒AQS队列
 Signal
-parkAndCheckInterrupt
+## parkAndCheckInterrupt 响应中断
 ```java
 private final boolean parkAndCheckInterrupt() {
     LockSupport.park(this); // 挂起了 直到unpark
