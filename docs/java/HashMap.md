@@ -19,7 +19,7 @@ public abstract Set<Entry<K,V>> entrySet();
 ```
 
 ## HashMap 
-### JDK8以前是头插法(死链），JDK8后是尾插法
+### JDK8后是尾插法, 以前是头插法(死链），
 rehash 过程中插入 （并发）
 主要是为了安全,防止环化
 但尾插也无法保证上一秒put的值，下一秒get的时候还是原值，所以线程安全还是无法保证。
