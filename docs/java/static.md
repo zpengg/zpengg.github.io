@@ -1,13 +1,16 @@
 # static
 ## 分类
-## static method
-not abstract
 ## staiic field
 no this/ super
+## static method
+not abstract
+只能访问静态成员
 ## static {block}
 类初始化时运行一次
 ## static innerClass
-静态内部类 不需要依赖 外部类实例
+静态内部类 
+使用上也是要正常实例化
+不需要依赖 外部类实例
 
 ## import static xxx.ClassName.*
 import static java.lang.Integer.*;

@@ -1,285 +1,37 @@
 # Spring 知识点
+[[spring-context]] 关键包
 
-标签（空格分隔）： Spring Java框架 
+## IOC
+[[ApplicationContext]]
+[[BeanFactory]]
+[[SpringMVC]]
+[[IOC]]
+[[Bean]]
+[[单例]]
+[[三级缓存]]
 
----
+## AOP
+[[BeanPostProcessor]] IOC - AOP 桥梁
+[[AOP]]
+## 注解
+[[@RequestMapping]]
+[[@Autowired]]
+[[@Resource]]
 
-[TOC]
-
-常用启动方法，入口：
-
-```java
-public static void main(String[] args) {
-    ApplicationContext context = new ClassPathXmlApplicationContext("classpath:applicationfile.xml");
-}
-```
-
-## IOC 
-> ioc是目的，di是手段。ioc是指让生成类的方式由传统方式（new）反过来，既程序员不调用new,需要类的时候由框架注入（di），是同一件不同层面的解读。
-
-ResourceLoader
-BeanFactory
-
-ApplicationContext 继承于这两个
-
-## bean 作用域
-作用域包括
- - singleton（单例模式） 默认
- - prototype（原型模式）
- - request（HTTP请求）
- - session（会话）
- - global-session（全局会话）
-
-https://www.cnblogs.com/amunamuna/p/10959796.html
-
-## spring-context 会引入下面的包
-<div align="center"> <img src="http://zpengg.oss-cn-shenzhen.aliyuncs.com/img/0464e17e26b765be0b02d632876f8db1.png"/> </div>
-
-## BeanFactory & ApplicationContext
-ApplicationContext 的两个顶层接口 BeanFactory 与 ResourceLoader。
-BeanFactory 提供了最简单的容器的功能，提供了实例化对象和取对象的功能。
-ApplicationContext 继承 BeanFactory
-![ApplicationContext](https://pic4.zhimg.com/80/v2-1006341abadfd3466b5b4587f349ab27_720w.jpg)
-
-## 容器加载过程
-AbstractApplicationContext.refresh()   
-```java
- 
-    @Override
-	public void refresh() throws BeansException, IllegalStateException {
-		synchronized (this.startupShutdownMonitor) {
-			// Prepare this context for refreshing.
-			prepareRefresh();
-
-			// Tell the subclass to refresh the internal bean factory.
-			ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();
-
-			// Prepare the bean factory for use in this context.
-			prepareBeanFactory(beanFactory);
-
-			try {
-				// Allows post-processing of the bean factory in context subclasses.
-				postProcessBeanFactory(beanFactory);
-
-				// Invoke factory processors registered as beans in the context.
-				invokeBeanFactoryPostProcessors(beanFactory);
-
-				// Register bean processors that intercept bean creation.
-				registerBeanPostProcessors(beanFactory);
-
-				// Initialize message source for this context.
-				initMessageSource();
-
-				// Initialize event multicaster for this context.
-				initApplicationEventMulticaster();
-                // ------
-				// Initialize other special beans in specific context subclasses.
-				onRefresh();
-                // ------
-				// Check for listener beans and register them.
-				registerListeners();
-
-				// Instantiate all remaining (non-lazy-init) singletons.
-				finishBeanFactoryInitialization(beanFactory);
-
-				// Last step: publish corresponding event.
-				finishRefresh();
-			}
-
-			catch (BeansException ex) {
-				logger.warn("Exception encountered during context initialization - cancelling refresh attempt", ex);
-
-				// Destroy already created singletons to avoid dangling resources.
-				destroyBeans();
-
-				// Reset 'active' flag.
-				cancelRefresh(ex);
-
-				// Propagate exception to caller.
-				throw ex;
-			}
-		}
-```
-
-## 注入方式
-第一种，SET注入
-a类中持有b类的引用，并且a类有b的set方法。在bean中添加<property>标签即可注入。实质上是将b实例化，然后调用set方法注入。
-```java
- <bean id="a" class="com.qunar.pojo.StudentA" scope="singleton">
-        <property name="studentB" ref="b"></property>
-    </bean>
-```
-第二种，构造器注入
-a类中持有b类的引用，并且a的构造函数参数中有b。实质上就是通过构造函数注入，创建a对象时要把b对象传进去。
+## 支持事务
+[[Spring 事务]]
 
 
-```java
-  <bean id="a" class="com.qunar.pojo.StudentA">
-        <constructor-arg index="0" ref="b"></constructor-arg>
-    </bean>
-```
+## 参考
+[API](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/ObjectFactory.html)
 
-3.静态工厂
-如果有需要静态工厂实例化的类，不能通过静态工厂.方法实现。在bean属性中对应类指向静态工厂，对应方法指向返回实例的方法
-
-第四种，实例工厂
-如果工厂不是静态，需要实例化，就实例化对应工厂，设定factory-bean和factory-method进行方法调用。
-
-[参考资料](https://www.jianshu.com/p/ff532b67902a)
-
-## 如何解决循环依赖
-
-### Spring 创建 Bean 流程
-getBean -> doGetBean ->if mbd.isSingleton -> createBean -> doCreateBean
-
-### 初始化三步走：
-追溯到 doCreateBean
- - createBeanInstance， 实例化，实际上就是调用对应的构造方法构造对象，此时只是调用了构造方法
- - populateBean，填充属性，这步property进行populate
- - initializeBean，调用init方法，或者AfterPropertiesSet方法
-
-```java
-	protected Object doCreateBean(final String beanName, final RootBeanDefinition mbd, final Object[] args) {
-
-        ...
-        //1.实例化bean对象
-        instanceWrapper = createBeanInstance(beanName, mbd, args);
-        ...
-        //1.1为此bean，创建一个ObjectFactory对象添加到singletonFactories中。
-        //这里把Bean先缓存了起来
-        addSingletonFactory(beanName, () -> getEarlyBeanReference(beanName, mbd, bean));
-        
-        ...
-        //2.装配属性 
-        populateBean(beanName, mbd, instanceWrapper);
-        
-        ...
-        //3.初始化bean
-        exposedObject = initializeBean(beanName, exposedObject, mbd);
-    }
-```
-
-### Spring 单例实现的原理
-原理：单例注册表
-优点：可以被继承
-
-源码：
-```java
-	private final Map<String, Object> singletonObjects = new ConcurrentHashMap<String, Object>(64);
-
-    protected Object getSingleton(String beanName, boolean allowEarlyReference) {
-    	Object singletonObject = this.singletonObjects.get(beanName);
-    	if (singletonObject == null && isSingletonCurrentlyInCreation(beanName)) {
-    		synchronized (this.singletonObjects) {
-    			singletonObject = this.earlySingletonObjects.get(beanName);
-    			if (singletonObject == null && allowEarlyReference) {
-    				ObjectFactory<?> singletonFactory = this.singletonFactories.get(beanName);
-    				if (singletonFactory != null) {
-    					singletonObject = singletonFactory.getObject();
-    					this.earlySingletonObjects.put(beanName, singletonObject);
-    					this.singletonFactories.remove(beanName);
-    				}
-    			}
-    		}
-    	}
-    	return (singletonObject != NULL_OBJECT ? singletonObject : null);
-    }
-```
-
-### 涉及到三级缓存
-
-```java
-/** Cache of singleton objects: bean name --> bean instance */
-private final Map<String, Object> singletonObjects = new ConcurrentHashMap<String, Object>(256);
-/** Cache of singleton factories: bean name --> ObjectFactory */
-private final Map<String, ObjectFactory<?>> singletonFactories = new HashMap<String, ObjectFactory<?>>(16);
-/** Cache of early singleton objects: bean name --> bean instance */
-private final Map<String, Object> earlySingletonObjects = new HashMap<String, Object>(16);
-```
-
-#### 为什么需要3级 不是2级
-
-回头看1.1 步骤
-```
-	protected Object doCreateBean(final String beanName, final RootBeanDefinition mbd, final Object[] args) {
-	...
-	    // Eagerly cache singletons to be able to resolve circular references
-		// even when triggered by lifecycle interfaces like BeanFactoryAware.
-		boolean earlySingletonExposure = (mbd.isSingleton() && this.allowCircularReferences &&
-				isSingletonCurrentlyInCreation(beanName));
-		if (earlySingletonExposure) {
-			if (logger.isDebugEnabled()) {
-				logger.debug("Eagerly caching bean '" + beanName +
-						"' to allow for resolving potential circular references");
-			}
-			addSingletonFactory(beanName, new ObjectFactory<Object>() {
-				@Override
-				public Object getObject() throws BeansException {
-					return getEarlyBeanReference(beanName, mbd, bean);
-				}
-			});
-		}
-	...
-	}
-
-/**
-	 * Obtain a reference for early access to the specified bean,
-	 * typically for the purpose of resolving a circular reference.
-	 * @param beanName the name of the bean (for error handling purposes)
-	 * @param mbd the merged bean definition for the bean
-	 * @param bean the raw bean instance
-	 * @return the object to expose as bean reference
-	 */
-	protected Object getEarlyBeanReference(String beanName, RootBeanDefinition mbd, Object bean) {
-		Object exposedObject = bean;
-		if (bean != null && !mbd.isSynthetic() && hasInstantiationAwareBeanPostProcessors()) {
-			for (BeanPostProcessor bp : getBeanPostProcessors()) {
-				if (bp instanceof SmartInstantiationAwareBeanPostProcessor) {
-					SmartInstantiationAwareBeanPostProcessor ibp = (SmartInstantiationAwareBeanPostProcessor) bp;
-					exposedObject = ibp.getEarlyBeanReference(exposedObject, beanName);
-					if (exposedObject == null) {
-						return exposedObject;
-					}
-				}
-			}
-		}
-		return exposedObject;
-	}
-```
-存放在singletonFactories好处是可扩展，我们在这个里面会调用beanPostProcessor 从而可以在我们实现提前获取对象引用的时候进行一些操作
-
-### BeanPostProcessors的作用
-BeanPostProcessor是spring提供的一个扩展点（钩子函数），通过BeanPostProcessor扩展点，我们可以对Spring管理的bean进行再加工。比如：修改bean的属性(@ConfigurationProperties注解的原理)、生成一个动态代理（事物）等。
-
-[BeanPostProcessor](https://5b0988e595225.cdn.sohucs.com/images/20180620/72943a141d504272978a8d543b8a6327.jpeg)
-
-与AOP有关 下文提及。
-
-#### @Autowired与BPP的关系
-@Autowired, @Inject, @Value, 和 @Resource 都是由Spring的BeanPostProcessor来处理的。
-在你自己定义的BeanPostProcessor或者BeanFactoryPostProcessor里面是不可以使用这些注解的，要么使用xml要么使用@Bean。
-
-### 为什么prototype不能打破循环引用
-当Spring容器遍历那些循环依赖的bean时，只要遍历到那种已经遍历过一次的bean，并且它们不是通过属性注入依赖的singleton时，就会直接抛出BeanCurrentlyInCreationException异常。
-org.springframework.beans.factory.support.AbstractBeanFactory#doGetBean
-
-```java
-if (isPrototypeCurrentlyInCreation(beanName)) {
-                throw new BeanCurrentlyInCreationException(beanName);
-            }
-```
-
-### @Autoired 按类型 @Resource 按名称 
-@Autowired默认按类型装配（这个注解是属业spring的），默认情况下必须要求依赖对象必须存在，如果要允许null值，可以设置它的required属性为false，如：@Autowired(required=false) ，如果我们想使用名称装配可以结合@Qualifier注解进行使用
-1.如果没有指定@Qualifier，默认安装类型注入，找不到则抛出异常。
-2，如果指定了@Qualifier，则按照名称注入，找不到则抛出异常。
+[[面试突击]]
 
 
-@Resource（这个注解属于J2EE的），默认按照名称进行装配
-1. 如果同时指定了name和type，则从Spring上下文中找到唯一匹配的bean进行装配，找不到则抛出异常
-2. 如果指定了name，则从上下文中查找名称（id）匹配的bean进行装配，找不到则抛出异常
-3. 如果指定了type，则从上下文中找到类型匹配的唯一bean进行装配，找不到或者找到多个，都会抛出异常
-4. 如果既没有指定name，又没有指定type，则自动按照byName方式进行装配；如果没有匹配，则回退为一个原始类型进行匹配，如果匹配则自动装配；
+
+
+
+
 
 Filter过滤器
 过滤器拦截web访问url地址。 严格意义上讲，filter只是适用于web中，依赖于Servlet容器，利用Java的回调机制进行实现。
