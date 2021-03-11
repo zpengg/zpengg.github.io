@@ -1,21 +1,24 @@
-# Leader副本选举策略
+# Leader 副本选举策略
 ## type
-NoOpLeaderSelector 默认
+NoOpLeaderSelector 
 ReassignedPartiionLeaderSelector  AR重新分配时的策略
-PreferredReplicaPartitionLeaderSelector 集群[[再均衡]]、用户手动均衡策略
+PreferredReplicaPartitionLeaderSelector 优先副本选举[[分区平衡]]
 OfflinePartitionLeaderSelector 分区状态变为上线时使用的策略
 ControlledShutdownLeaderSelector 处理其他下线
 
-## Reassigned
-配置指定AR ISR 交集第一个
+## ReassignPartitionLeaderElectionStrategy
+时间：重新分配分区
+1. **按配置指定AR**，与 ISR 交集第一个
 
-## offlen
-优先ISR 第一个
-
-退化： 按配置 可能 选AR
-
-## Prefer
+## PreferredReplicaPartitionLeaderElectionStrategy
+时间：优先副本选举 [[分区平衡]]， 选出新的Leader，新的ISR
 原始AR里的第一个
 
-## offline
-先下线，更新isr 选第一个
+## OfflinePartitionLeaderElectionStrategy.
+时间： 创建分区， 分区上线
+1. AR集合第一个存活的副本，并且这个副本在ISR集合
+
+## ControlledShutdownPartitionLeaderElectionStrategy
+时间：当controller收到shutdown命令后，触发新的分区主副本选举 (优雅关闭)
+1. AR列表第一个存活的副本，并且这个副本在ISR列表， Offline 的一样
+2. 还要确保不处于正在被关闭的节点上。

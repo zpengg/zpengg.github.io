@@ -1,7 +1,7 @@
 # ReplicaSM
+管理 [[分区]] [[多副本]]
 
 ## state
-
 new
 Online
 offline
