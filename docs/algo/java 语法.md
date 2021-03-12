@@ -33,6 +33,8 @@ Math.pow(a,b); // a^b
 double i = 1e9; // 10^9
 int i = 1e9; // 编译错误: java: 不兼容的类型: 从double转换到int可能会有损失
 int i =(int) 1e9; //没有问题 10^9
+## 二分
+int mid = l + (r-l >>>1);
 
 ## 长度
 字符串 length()
@@ -40,9 +42,12 @@ int i =(int) 1e9; //没有问题 10^9
 容器 size（）
 
 ## compartor
-(o1 - o2)>0, o1 >o2
+(o1 - o2)>0, o1 < o2
+据第一个参数小于、等于或大于第二个参数分别返回负整数、零或正整数
 ## 排序
-Arrays.sort(pair, (o1, o2) ->(o1 - o2));
+传入的是 less Comparator less时返回true
+升序： Arrays.sort(pair, (o1, o2) ->(o1 - o2));
+
 记忆：
 参数顺序升序 (o1, o2) ->(o1 - o2)
 参数逆序降序 (o1, o2) ->(o2 - o1)
@@ -71,9 +76,15 @@ int[][] directions = {
 };
 
 ```
+#### List<Integer> -> int
+```java
+int[] intArray = arrayList.stream().mapToInt(Integer::intValue).toArray();
+```
+
 #### 打印数组
 `Arrays.deepToString(int[][])`
 
+Collections.
 ## 容器
 ### Stack.empty; deque.isEmpty;
 ### hashMap 记录计数
