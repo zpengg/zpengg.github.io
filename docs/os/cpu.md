@@ -1,4 +1,17 @@
 # CPU
+
+## 指标
+[[CPU 数量]]
+[[平均负载]]
+[[CPU 使用率]]
+
+## 概念
+[[CPU 上下文]]
+[[CPU 特权等级]]
+[[CPU 中断]]
+[[Steal Time]]
+
+## 操作
 CPU 抢占
 CPU 绑定
 
@@ -18,3 +31,4 @@ CPU 缓存可以分为一级缓存，二级缓存，部分高端 CPU 还具有�
 
 ## false sharing
 [[FalseSharing]]
+

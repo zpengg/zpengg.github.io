@@ -1,0 +1,3 @@
+[[GOPATH]]
+[[GOROOT]]
+[[GOSUMDB]]

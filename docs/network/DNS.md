@@ -38,7 +38,7 @@ $ dig www.baidu.com
 $ dig www.baidu.com ++trace
 ```
 ![](https://imgconvert.csdnimg.cn/aHR0cDovL3pwZW5nZy5vc3MtY24tc2hlbnpoZW4uYWxpeXVuY3MuY29tL2ltZy8yYmEzODZmODU5MzdkNzUxMWVmYjBiNDlhMzQ5NDEwNC5wbmc?x-oss-process=image/format,png)
-可以看到迭代查询过程
+可以看到迭代查询过程,是从根服务器查下来的
 
 类似的命令还有 nslookup，会返回更简介一点 
 ![](https://imgconvert.csdnimg.cn/aHR0cDovL3pwZW5nZy5vc3MtY24tc2hlbnpoZW4uYWxpeXVuY3MuY29tL2ltZy8xYzcwNjEyNTU4ZDhkZmNjMzk0OThhYTA2MDA2YTI5MC5wbmc?x-oss-process=image/format,png)
@@ -78,4 +78,13 @@ chrome://net-internals/#dns
 ## 清除本地dns 缓存 mac
 dscacheutil -flushcache
 
+
+
+
+## CDN 常见问题
+性能毛刺
+域名劫持
+流量跨网
+
+[[多CDN 调度]]
 

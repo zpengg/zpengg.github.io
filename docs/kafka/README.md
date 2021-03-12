@@ -38,6 +38,7 @@ batch send
 ## 实战问题
 [[消费因果顺序]] 增删改
 [[消息堆积]]
+[[性能评估]]
 
 ## 参考资料
  - [Kafka 的这些原理你知道吗](https://segmentfault.com/a/1190000021370626?utm_source=tag-newest)

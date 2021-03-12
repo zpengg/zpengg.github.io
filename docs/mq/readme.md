@@ -3,9 +3,10 @@
 
 ## 常见 MQ
  - ActiveMQ 是基于 [[JMS]] 实现的Provider（可以理解为队列）
- - RabbitMq 不支持动态扩展
+ - RabbitMq 不支持动态扩展, 一个节点包含所有原数据
  - RocketMq 分布式 阿里云 文档缺乏 
  - KafKa 分布式 成熟日志领域
+ - plursa
 
 ![对比图](https://img-blog.csdn.net/20170629183901936?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc29uZ2ZlaWh1MDgxMDIzMg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
  
@@ -13,7 +14,7 @@
 [[MQTT]]
 OpenWire
 Stomp
-AMQP
+[[AMQP]]
 
 ## 特性
 kafka 砍掉的复杂的特性，如
